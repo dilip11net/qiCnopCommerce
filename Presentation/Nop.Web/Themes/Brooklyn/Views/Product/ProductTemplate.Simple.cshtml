@@ -1,0 +1,411 @@
+﻿@model ProductDetailsModel
+@using Nop.Core.Domain.Seo;
+@inject Nop.Core.IWebHelper webHelper 
+@using Nop.Core.Domain.Catalog
+@inject SeoSettings seoSettings
+@inject CatalogSettings catalogSettings
+@{
+    Layout = "_ColumnsOne";
+
+    //title
+    Html.AddTitleParts(!string.IsNullOrEmpty(Model.MetaTitle) ? Model.MetaTitle : Model.Name);
+    //meta
+    Html.AddMetaDescriptionParts(Model.MetaDescription);
+    Html.AddMetaKeywordParts(Model.MetaKeywords);
+    //page class
+    Html.AppendPageCssClassParts("html-product-details-page");
+
+    //canonical URL
+    if (seoSettings.CanonicalUrlsEnabled)
+    {
+        var productUrl = Url.RouteUrl("Product", new { SeName = Model.SeName }, webHelper.CurrentRequestProtocol).ToLowerInvariant();
+        Html.AddCanonicalUrlParts(productUrl, seoSettings.QueryStringInCanonicalUrlsEnabled);
+    }
+
+    //open graph META tags
+    if (seoSettings.OpenGraphMetaTags)
+    {
+        Html.AddHeadCustomParts("<meta property=\"og:type\" content=\"product\" />");
+        Html.AddHeadCustomParts("<meta property=\"og:title\" content=\"" + Html.Encode(Model.Name) + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"og:description\" content=\"" + Html.Encode(Nop.Core.Html.HtmlHelper.StripTags(Model.MetaDescription)) + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"og:image\" content=\"" + Model.DefaultPictureModel.ImageUrl + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"og:image:url\" content=\"" + Model.DefaultPictureModel.ImageUrl + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"og:url\" content=\"" + webHelper.GetThisPageUrl(false) + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"og:site_name\" content=\"" + Html.Encode(Model.CurrentStoreName) + "\" />");
+    }
+
+    var showShareButton = catalogSettings.ShowShareButton;
+    //Twitter META tags
+    if (seoSettings.TwitterMetaTags)
+    {
+        Html.AddHeadCustomParts("<meta property=\"twitter:card\" content=\"summary\" />");
+        Html.AddHeadCustomParts("<meta property=\"twitter:site\" content=\"" + Html.Encode(Model.CurrentStoreName) + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"twitter:title\" content=\"" + Html.Encode(Model.Name) + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"twitter:description\" content=\"" + Html.Encode(Nop.Core.Html.HtmlHelper.StripTags(Model.MetaDescription)) + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"twitter:image\" content=\"" + Model.DefaultPictureModel.ImageUrl + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"twitter:url\" content=\"" + webHelper.GetThisPageUrl(false) + "\" />");
+    }
+}
+
+<!--product breadcrumb-->
+@section Breadcrumb
+{
+    @await Html.PartialAsync("_ProductBreadcrumb", Model.Breadcrumb)
+}
+@await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.ProductDetailsAfterBreadcrumb, additionalData = Model })
+<div class="page product-details-page">
+    <div class="page-body">
+        @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.ProductDetailsTop, additionalData = Model })
+        <form asp-route="Product" asp-route-sename="@Model.SeName" method="post" id="product-details-form">
+            @if (seoSettings.MicrodataEnabled)
+            {
+                @await Html.PartialAsync("_Microdata", Model)
+            }
+            <div data-productid="@Model.Id">
+                <div class="product-name">
+                    <h1>@Model.Api_Title</h1>
+                    @await Component.InvokeAsync("Widget", new { widgetZone = "productname_bottom", additionalData = Model.Id })
+                </div>
+                <div class="product-essential">
+                    @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.ProductDetailsEssentialTop, additionalData = Model })
+                    @{
+                        var cloudZoom = await Component.InvokeAsync("Widget", new { widgetZone = "sevenspikes_cloud_zoom" });
+                    }
+                    @if (!String.IsNullOrEmpty(cloudZoom.ToHtmlString()))
+                    {
+                    @cloudZoom
+                    }
+                    else
+                    {
+                    @await Html.PartialAsync("_ProductDetailsPictures", Model)
+                    }
+                    <div class="overview">
+                        <!--product reviews-->
+                        @await Html.PartialAsync("_ProductReviewOverview", Model.ProductReviewOverview)
+
+                        @await Html.PartialAsync("_Discontinued", Model)
+                        @if (!string.IsNullOrEmpty(Model.ShortDescription))
+                        {
+                        <div class="short-description">
+                            @Html.Raw(Model.ShortDescription)
+                        </div>
+                        }
+                        @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.ProductDetailsOverviewTop, additionalData = Model })
+                        <!--manufacturers-->
+                        @await Html.PartialAsync("_ProductManufacturers", Model.ProductManufacturers)
+                        <!--availability-->
+                        @await Html.PartialAsync("_Availability", Model)
+                        <!--SKU, MAN, GTIN, vendor-->
+                        @await Html.PartialAsync("_SKU_Man_GTIN_Ven", Model)
+                        <!--delivery-->
+                        @await Html.PartialAsync("_DeliveryInfo", Model)
+                        <!--attributes-->
+                        @{
+                            var dataDictAttributes = new ViewDataDictionary(ViewData);
+                            dataDictAttributes.TemplateInfo.HtmlFieldPrefix = $"attributes_{Model.Id}";
+                            @await Html.PartialAsync("_ProductAttributes", Model.ProductAttributes, dataDictAttributes)
+                        }
+                        <!--wishlist, compare, email a friend-->
+                        <div class="overview-buttons">
+                            @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.ProductDetailsInsideOverviewButtonsBefore, additionalData = Model })
+                            @{
+                                var dataDictAddToWishlist = new ViewDataDictionary(ViewData);
+                                dataDictAddToWishlist.TemplateInfo.HtmlFieldPrefix = $"addtocart_{Model.Id}";
+                                @await Html.PartialAsync("_AddToWishlist", Model.AddToCart, dataDictAddToWishlist)
+                            }
+                            @await Html.PartialAsync("_CompareProductsButton", Model)
+                            @await Html.PartialAsync("_ProductEmailAFriendButton", Model)
+                            <!--sample download-->
+                            @await Html.PartialAsync("_DownloadSample", Model)
+                            @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.ProductDetailsInsideOverviewButtonsAfter, additionalData = Model })
+                        </div>
+                        <!--gift card-->
+                        @{
+                            var dataDictGiftCard = new ViewDataDictionary(ViewData);
+                            dataDictGiftCard.TemplateInfo.HtmlFieldPrefix = $"giftcard_{Model.Id}";
+                            @await Html.PartialAsync("_GiftCardInfo", Model.GiftCard, dataDictGiftCard)
+                        }
+                        <!--rental info-->
+                        @{
+                            var dataDictRental = new ViewDataDictionary(ViewData);
+                            dataDictRental.TemplateInfo.HtmlFieldPrefix = $"rental_{Model.Id}";
+                            @await Html.PartialAsync("_RentalInfo", Model, dataDictRental)
+                        }
+                        <!--price & add to cart-->
+                        @{
+                            var dataDictPrice = new ViewDataDictionary(ViewData);
+                            dataDictPrice.TemplateInfo.HtmlFieldPrefix = $"price_{Model.Id}";
+                            @await Html.PartialAsync("_ProductPrice", Model.ProductPrice, dataDictPrice)
+
+                            var dataDictAddToCart = new ViewDataDictionary(ViewData);
+                            dataDictAddToCart.TemplateInfo.HtmlFieldPrefix = $"addtocart_{Model.Id}";
+                            @await Html.PartialAsync("_AddToCart", Model.AddToCart, dataDictAddToCart)
+                        }
+                        @await Html.PartialAsync("_ProductEstimateShipping", Model.ProductEstimateShipping)
+                        @if (showShareButton)
+                        {
+                        @await Html.PartialAsync("_ShareButton", Model)
+                        }
+                        @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.ProductDetailsOverviewBottom, additionalData = Model })
+                    </div>
+
+
+
+                    <div id="quickTabs" class="productTabs ui-tabs ui-corner-all ui-widget ui-widget-content" data-ajaxenabled="false" data-productreviewsaddnewurl="/ProductTab/ProductReviewsTabAddNew/2" data-productcontactusurl="/ProductTab/ProductContactUsTabAddNew/2" data-couldnotloadtaberrormessage="Couldn't load this tab.">
+                        <div class="productTabs-header"><ul role="tablist" class="ui-tabs-nav ui-corner-all ui-helper-reset ui-helper-clearfix ui-widget-header">
+                            
+                            
+                            <li role="tab" tabindex="0" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab " aria-controls="quickTab-description" aria-labelledby="ui-id-1" aria-selected="true" aria-expanded="true"><a href="#quickTab-description" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-1">Overview</a></li>
+                            
+                            
+                            
+                            <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab" aria-controls="quickTab-specifications" aria-labelledby="ui-id-2" aria-selected="false" aria-expanded="false"><a href="#quickTab-specifications" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-2">Specifications</a></li>
+                            
+                            
+                            <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab" aria-controls="quickTab-reviews" aria-labelledby="ui-id-3" aria-selected="false" aria-expanded="false"><a href="#quickTab-reviews" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-3">Reviews</a></li>
+                            
+                            
+                            <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default  ui-tab" aria-controls="quickTab-contact_us" aria-labelledby="ui-id-4" aria-selected="false" aria-expanded="false"><a href="#quickTab-contact_us" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-4">Contact Us</a></li>
+                             
+                             
+                             </ul></div>
+
+
+
+
+
+
+
+                        <div class="productTabs-body">
+                            <div id="quickTab-description" aria-labelledby="ui-id-1" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content" aria-hidden="false" style="">
+                                <div class="full-description" itemprop="description">
+
+                                    <p>
+
+
+                                        @if (!string.IsNullOrEmpty(Model.FullDescription))
+                    {
+
+                                        @Html.Raw(Model.FullDescription)
+
+                    }
+
+
+                                    </p>
+
+
+
+                                </div>
+                            </div>
+
+
+
+
+
+                            <div id="quickTab-specifications" aria-labelledby="ui-id-2" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content" aria-hidden="true" style="display: none;">
+                                <div class="product-specs-box">
+                                    <div class="title"><strong>Products specifications</strong></div><div class="table-wrapper">
+
+
+                                        <div class="full-description">
+                                            <b>Title</b>
+                                        </div>
+                                        <div class="full-description">
+                                            @Html.Raw(Model.Api_Title)
+                                        </div>
+
+                                        <div class="full-description">
+                                            <b>Special Price</b>
+                                        </div>
+                                        <div class="full-description">
+                                            @Html.Raw(Model.Api_specialPrice)
+                                        </div>
+
+                                        <div class="full-description">
+                                            <b>Warranty</b>
+                                        </div>
+                                        <div class="full-description">
+                                            @Html.Raw(Model.Api_warranty)
+                                        </div>
+
+                                        <div class="full-description">
+                                            <b>Warranty Type</b>
+                                        </div>
+                                        <div class="full-description">
+                                            @Html.Raw(Model.Api_warrantyType)
+                                        </div>
+
+
+                                        <div class="full-description">
+                                            <b>White Paper</b>
+                                        </div>
+                                        <div class="full-description">
+                                            @Html.Raw(Model.Api_whitePaper2)
+                                        </div>
+
+                                        <div class="full-description">
+                                            <b>SKU</b>
+                                        </div>
+                                        <div class="full-description">
+                                            @Html.Raw(Model.Api_Sku)
+                                        </div>
+
+
+                                        <div class="full-description">
+                                            <b>RRP</b>
+                                        </div>
+                                        <div class="full-description">
+                                            @Html.Raw(Model.Api_rrp)
+                                        </div>
+
+
+                                        <div class="full-description">
+                                            <b>Market Place Quantity</b>
+                                        </div>
+                                        <div class="full-description">
+                                            @Html.Raw(Model.Api_marketPlaceQuantity)
+                                        </div>
+
+                                        <div class="full-description">
+                                            <b>BackEnd Description</b>
+                                        </div>
+                                        <div class="full-description">
+                                            @Html.Raw(Model.Api_backEndDescription)
+                                        </div>
+
+
+                                        <div class="full-description">
+                                            <b>Delivery Time</b>
+                                        </div>
+                                        <div class="full-description">
+                                            @Html.Raw(Model.Api_deliveryTime)
+                                        </div>
+
+
+
+                                        <div class="full-description">
+                                            <b>From Manufacturer</b>
+                                        </div>
+                                        <div class="full-description">
+                                            @Html.Raw(Model.Api_fromManufacturer)
+                                        </div>
+
+
+                                        <div class="full-description">
+                                            <b>In The Box</b>
+                                        </div>
+                                        <div class="full-description">
+                                            @Html.Raw(Model.Api_inTheBox)
+                                        </div>
+
+
+                                        <div class="full-description">
+                                            <b>Product Highlights</b>
+                                        </div>
+                                        <div class="full-description">
+                                            @Html.Raw(Model.Api_productHighlights)
+                                        </div>
+
+                                        <div class="full-description">
+                                            <b>Specs</b>
+                                        </div>
+                                        <div class="full-description">
+                                            @Html.Raw(Model.Api_specs)
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+
+                            <div id="quickTab-reviews" aria-labelledby="ui-id-3" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content" aria-hidden="true" style="display: none;"><div id="updateTargetId" class="product-reviews-page"><div class="write-review" id="review-form"><div class="title"><strong>Write your own review</strong></div><div class="message-error validation-summary-errors"><ul><li>Only registered users can write reviews</li></ul></div><div class="form-fields"><div class="inputs"><label for="AddProductReview_Title">Review title:</label> <input class="review-title" type="text" id="AddProductReview_Title" name="AddProductReview.Title" disabled="" tabindex="25"> <span class="required">*</span> <span class="field-validation-valid" data-valmsg-for="AddProductReview.Title" data-valmsg-replace="true"></span></div><div class="inputs"><label for="AddProductReview_ReviewText">Review text:</label> <textarea class="review-text" id="AddProductReview_ReviewText" name="AddProductReview.ReviewText" disabled="" tabindex="26"></textarea> <span class="required">*</span> <span class="field-validation-valid" data-valmsg-for="AddProductReview.ReviewText" data-valmsg-replace="true"></span></div><div class="review-rating"><div class="name-description"><label for="AddProductReview_Rating">Rating:</label></div><div class="rating-wrapper"><div class="label first">Bad</div><div class="rating-options"><input value="1" type="radio" id="addproductrating_1" data-val="true" data-val-required="The Rating field is required." name="AddProductReview.Rating" tabindex="27"> <input value="2" type="radio" id="addproductrating_2" name="AddProductReview.Rating" tabindex="28"> <input value="3" type="radio" id="addproductrating_3" name="AddProductReview.Rating" tabindex="29"> <input value="4" type="radio" id="addproductrating_4" name="AddProductReview.Rating" tabindex="30"> <input value="5" type="radio" id="addproductrating_5" checked="" name="AddProductReview.Rating" tabindex="31"></div><div class="label last">Excellent</div></div></div></div><div class="buttons"><input type="button" id="add-review" disabled="" name="add-review" class="button-1 write-product-review-button" value="Submit review" tabindex="32"></div></div><div class="product-review-list"><div class="title"><strong>Existing reviews</strong></div><div class="product-review-item"><div class="review-item-head"><div class="review-title"><strong>asd asd </strong></div><div class="product-review-box"><div class="rating"><div style="width:100%"></div></div></div></div><div class="review-text">asd as d</div><div class="review-info"><span class="user"> <strong>From:</strong> test </span> <span class="separator">|</span> <span class="date"> <strong>Date:</strong> 3/4/2016 1:14 AM </span></div><div class="product-review-helpfulness" data-productreviewid="40" data-productreviewvoteurl="/setproductreviewhelpfulness"><span class="question">Was this review helpful?</span> <span class="vote-options"> <span id="vote-yes-40" class="vote vote-yes">Yes</span> <span id="vote-no-40" class="vote vote-no">No</span> </span> <span class="vote-stats"> (<span id="helpfulness-vote-yes-40">0</span>/<span id="helpfulness-vote-no-40">0</span>) </span> <span id="helpfulness-vote-result-40" class="result"></span></div></div><div class="product-review-item"><div class="review-item-head"><div class="review-title"><strong>fsd</strong></div><div class="product-review-box"><div class="rating"><div style="width:80%"></div></div></div></div><div class="review-text">sdf</div><div class="review-info"><span class="user"> <strong>From:</strong> sdf </span> <span class="separator">|</span> <span class="date"> <strong>Date:</strong> 2/14/2018 12:34 AM </span></div><div class="product-review-helpfulness" data-productreviewid="42" data-productreviewvoteurl="/setproductreviewhelpfulness"><span class="question">Was this review helpful?</span> <span class="vote-options"> <span id="vote-yes-42" class="vote vote-yes">Yes</span> <span id="vote-no-42" class="vote vote-no">No</span> </span> <span class="vote-stats"> (<span id="helpfulness-vote-yes-42">1</span>/<span id="helpfulness-vote-no-42">0</span>) </span> <span id="helpfulness-vote-result-42" class="result"></span></div></div></div></div></div>
+
+
+
+
+
+                            <div id="quickTab-contact_us" aria-labelledby="ui-id-4" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content" aria-hidden="true" style="display: none;"><div id="contact-us-tab" class="write-review"><div class="form-fields"><div class="inputs"><label for="FullName">Your name</label> <input placeholder="Enter your name" class="contact_tab_fullname review-title" type="text" data-val="true" data-val-required="Enter your name" id="FullName" name="FullName" tabindex="33"> <span class="required">*</span> <span class="field-validation-valid" data-valmsg-for="FullName" data-valmsg-replace="true"></span></div><div class="inputs"><label for="Email">Your email</label> <input placeholder="Enter your email address" class="contact_tab_email review-title" type="email" data-val="true" data-val-email="Wrong email" data-val-required="Enter email" id="Email" name="Email" tabindex="34"> <span class="required">*</span> <span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span></div><div class="inputs"><label for="Enquiry">Enquiry</label> <textarea placeholder="Enter your enquiry" class="contact_tab_enquiry review-text" data-val="true" data-val-required="Enter enquiry" id="Enquiry" name="Enquiry" tabindex="35"></textarea> <span class="required">*</span> <span class="field-validation-valid" data-valmsg-for="Enquiry" data-valmsg-replace="true"></span></div></div><div class="buttons"><input type="button" id="send-contact-us-form" name="send-email" class="button-1 contact-us-button" value="Submit" tabindex="36"></div></div></div>
+
+
+
+                        </div>
+                    </div>
+
+
+                  
+
+
+                    <script src="~/js/0w5ivo83x8m-pd8wkjov8nsxwbgfdrkhorkcx4a3h38.min.js"></script>
+
+
+
+                    @*qiConsole*@
+                    @*<div class="full-description">
+            <b>Amazon Item Code</b>
+        </div>*@
+                    @*<div class="full-description">
+            @Html.Raw(Model.Api_amazonItemCode)
+        </div>
+
+        <div class="full-description">
+            <b>Flipkart Item Code</b>
+        </div>
+        <div class="full-description">
+            @Html.Raw(Model.Api_flipkartItemCode)
+        </div>
+
+
+        <div class="full-description">
+            <b>Paytm Item Code</b>
+        </div>
+        <div class="full-description">
+            @Html.Raw(Model.Api_paytmItemCode)
+        </div>*@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    @*qiConsole*@
+
+
+
+
+
+                    @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.ProductDetailsEssentialBottom, additionalData = Model })
+                </div>
+                @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.ProductDetailsBeforeCollateral, additionalData = Model })
+                <div class="product-collateral">
+                    @await Html.PartialAsync("_ProductTierPrices", Model.TierPrices)
+                    @await Html.PartialAsync("_ProductSpecifications", Model.ProductSpecifications)
+                    @await Html.PartialAsync("_ProductTags", Model.ProductTags)
+                </div>
+                @await Component.InvokeAsync("ProductsAlsoPurchased", new { productId = Model.Id })
+                @await Component.InvokeAsync("RelatedProducts", new { productId = Model.Id })
+            </div>
+        </form>
+        @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.ProductDetailsBottom, additionalData = Model })
+    </div>
+</div>

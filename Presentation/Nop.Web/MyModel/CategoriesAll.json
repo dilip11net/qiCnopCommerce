@@ -1,0 +1,2796 @@
+{
+  "parentCategoriesList": [
+    {
+      "parentCategoryId": 2,
+      "parentCategoryName": "Audio"
+    },
+    {
+      "parentCategoryId": 3,
+      "parentCategoryName": "Photography"
+    },
+    {
+      "parentCategoryId": 4,
+      "parentCategoryName": "Video"
+    },
+    {
+      "parentCategoryId": 5,
+      "parentCategoryName": "Tripods & Supports"
+    },
+    {
+      "parentCategoryId": 6,
+      "parentCategoryName": "Lights"
+    },
+    {
+      "parentCategoryId": 7,
+      "parentCategoryName": "Mobile Photography"
+    },
+    {
+      "parentCategoryId": 8,
+      "parentCategoryName": "Bags & Cases"
+    },
+    {
+      "parentCategoryId": 10,
+      "parentCategoryName": "Other"
+    }
+  ],
+  "categoriesList": [
+    {
+      "parentCategoryId": 2,
+      "categoryId": 317,
+      "categoryName": "Adapters & Accessories"
+    },
+    {
+      "parentCategoryId": 2,
+      "categoryId": 318,
+      "categoryName": "Audio Recorders"
+    },
+    {
+      "parentCategoryId": 2,
+      "categoryId": 330,
+      "categoryName": "Digital & Data Cables"
+    },
+    {
+      "parentCategoryId": 2,
+      "categoryId": 334,
+      "categoryName": "Headphones & Earphones"
+    },
+    {
+      "parentCategoryId": 2,
+      "categoryId": 350,
+      "categoryName": "Microphone Accessories"
+    },
+    {
+      "parentCategoryId": 2,
+      "categoryId": 370,
+      "categoryName": "Teleprompters"
+    },
+    {
+      "parentCategoryId": 2,
+      "categoryId": 386,
+      "categoryName": "Wired Microphones"
+    },
+    {
+      "parentCategoryId": 2,
+      "categoryId": 388,
+      "categoryName": "Wireless Microphones"
+    },
+    {
+      "parentCategoryId": 2,
+      "categoryId": 389,
+      "categoryName": "MicroPhone and Accessories"
+    },
+    {
+      "parentCategoryId": 3,
+      "categoryId": 391,
+      "categoryName": "Drawing Tablets "
+    },
+    {
+      "parentCategoryId": 3,
+      "categoryId": 392,
+      "categoryName": "Umbrella"
+    },
+    {
+      "parentCategoryId": 3,
+      "categoryId": 393,
+      "categoryName": "Cables and Cords"
+    },
+    {
+      "parentCategoryId": 3,
+      "categoryId": 395,
+      "categoryName": "LIGHT STAND"
+    },
+    {
+      "parentCategoryId": 3,
+      "categoryId": 398,
+      "categoryName": "Lighting & Studio"
+    },
+    {
+      "parentCategoryId": 3,
+      "categoryId": 366,
+      "categoryName": "Straps"
+    },
+    {
+      "parentCategoryId": 3,
+      "categoryId": 351,
+      "categoryName": "Mobile Photography"
+    },
+    {
+      "parentCategoryId": 3,
+      "categoryId": 338,
+      "categoryName": "Lens Hood And Caps"
+    },
+    {
+      "parentCategoryId": 3,
+      "categoryId": 349,
+      "categoryName": "Memory Cards & Readers"
+    },
+    {
+      "parentCategoryId": 3,
+      "categoryId": 357,
+      "categoryName": "Optical Slaves"
+    },
+    {
+      "parentCategoryId": 3,
+      "categoryId": 336,
+      "categoryName": "Lens & Accessories"
+    },
+    {
+      "parentCategoryId": 3,
+      "categoryId": 333,
+      "categoryName": "Grips, Clamps & Arms"
+    },
+    {
+      "parentCategoryId": 3,
+      "categoryId": 331,
+      "categoryName": "Filters"
+    },
+    {
+      "parentCategoryId": 3,
+      "categoryId": 327,
+      "categoryName": "Cameras"
+    },
+    {
+      "parentCategoryId": 3,
+      "categoryId": 320,
+      "categoryName": "Battery Grips"
+    },
+    {
+      "parentCategoryId": 3,
+      "categoryId": 321,
+      "categoryName": "Binoculars"
+    },
+    {
+      "parentCategoryId": 3,
+      "categoryId": 324,
+      "categoryName": "Batteries & Chargers"
+    },
+    {
+      "parentCategoryId": 4,
+      "categoryId": 325,
+      "categoryName": "Camera Supports"
+    },
+    {
+      "parentCategoryId": 4,
+      "categoryId": 316,
+      "categoryName": "Action Cameras & Accessories"
+    },
+    {
+      "parentCategoryId": 4,
+      "categoryId": 323,
+      "categoryName": "Camcorders"
+    },
+    {
+      "parentCategoryId": 4,
+      "categoryId": 332,
+      "categoryName": "Follow Focus & Lens Support"
+    },
+    {
+      "parentCategoryId": 4,
+      "categoryId": 329,
+      "categoryName": "Cucoloris, Scrims & Flags"
+    },
+    {
+      "parentCategoryId": 4,
+      "categoryId": 358,
+      "categoryName": "Professional Video Cameras"
+    },
+    {
+      "parentCategoryId": 4,
+      "categoryId": 352,
+      "categoryName": "Monitors"
+    },
+    {
+      "parentCategoryId": 4,
+      "categoryId": 361,
+      "categoryName": "Railing Systems & Components"
+    },
+    {
+      "parentCategoryId": 4,
+      "categoryId": 377,
+      "categoryName": "Video Capture & Converters"
+    },
+    {
+      "parentCategoryId": 4,
+      "categoryId": 378,
+      "categoryName": "Video Editing Systems & Hardware"
+    },
+    {
+      "parentCategoryId": 4,
+      "categoryId": 379,
+      "categoryName": "Video Lenses & Accessories"
+    },
+    {
+      "parentCategoryId": 4,
+      "categoryId": 387,
+      "categoryName": "Wireless & Broadcast Equipment"
+    },
+    {
+      "parentCategoryId": 4,
+      "categoryId": 381,
+      "categoryName": "Video Memory Cards"
+    },
+    {
+      "parentCategoryId": 4,
+      "categoryId": 382,
+      "categoryName": "Video Power & Cables"
+    },
+    {
+      "parentCategoryId": 4,
+      "categoryId": 383,
+      "categoryName": "Video Switching & Distribution"
+    },
+    {
+      "parentCategoryId": 4,
+      "categoryId": 384,
+      "categoryName": "Video Viewfinders"
+    },
+    {
+      "parentCategoryId": 4,
+      "categoryId": 385,
+      "categoryName": "VR & 360 Cameras"
+    },
+    {
+      "parentCategoryId": 5,
+      "categoryId": 360,
+      "categoryName": "Quick Release"
+    },
+    {
+      "parentCategoryId": 5,
+      "categoryId": 371,
+      "categoryName": "Tripod Heads"
+    },
+    {
+      "parentCategoryId": 5,
+      "categoryId": 372,
+      "categoryName": "Tripods"
+    },
+    {
+      "parentCategoryId": 5,
+      "categoryId": 356,
+      "categoryName": "Mounts & Supports"
+    },
+    {
+      "parentCategoryId": 5,
+      "categoryId": 354,
+      "categoryName": "Monopods"
+    },
+    {
+      "parentCategoryId": 6,
+      "categoryId": 355,
+      "categoryName": "Mounting Accessories"
+    },
+    {
+      "parentCategoryId": 6,
+      "categoryId": 346,
+      "categoryName": "Lighting Gels & Diffusion"
+    },
+    {
+      "parentCategoryId": 6,
+      "categoryId": 347,
+      "categoryName": "Lighting Power & Cables"
+    },
+    {
+      "parentCategoryId": 6,
+      "categoryId": 348,
+      "categoryName": "Macro , Ring Flash"
+    },
+    {
+      "parentCategoryId": 6,
+      "categoryId": 353,
+      "categoryName": "Monolights & Strobes"
+    },
+    {
+      "parentCategoryId": 6,
+      "categoryId": 340,
+      "categoryName": "Lenses & Gobos"
+    },
+    {
+      "parentCategoryId": 6,
+      "categoryId": 341,
+      "categoryName": "Light Accessories"
+    },
+    {
+      "parentCategoryId": 6,
+      "categoryId": 342,
+      "categoryName": "Light Booms & Stands"
+    },
+    {
+      "parentCategoryId": 6,
+      "categoryId": 343,
+      "categoryName": "Light meters"
+    },
+    {
+      "parentCategoryId": 6,
+      "categoryId": 344,
+      "categoryName": "Light Stand Accessories"
+    },
+    {
+      "parentCategoryId": 6,
+      "categoryId": 328,
+      "categoryName": "Continuos Lights"
+    },
+    {
+      "parentCategoryId": 6,
+      "categoryId": 322,
+      "categoryName": "Butterflies & Panels"
+    },
+    {
+      "parentCategoryId": 6,
+      "categoryId": 373,
+      "categoryName": "Trussing Equipment"
+    },
+    {
+      "parentCategoryId": 6,
+      "categoryId": 374,
+      "categoryName": "Umbrella Mounts"
+    },
+    {
+      "parentCategoryId": 6,
+      "categoryId": 375,
+      "categoryName": "Umbrellas & Accessories"
+    },
+    {
+      "parentCategoryId": 6,
+      "categoryId": 380,
+      "categoryName": "Video Lighting"
+    },
+    {
+      "parentCategoryId": 6,
+      "categoryId": 362,
+      "categoryName": "Reflectors & Accessories"
+    },
+    {
+      "parentCategoryId": 6,
+      "categoryId": 363,
+      "categoryName": "Remotes, Teleconverters and Cleaning Supplies"
+    },
+    {
+      "parentCategoryId": 6,
+      "categoryId": 364,
+      "categoryName": "Softboxes & Accessories"
+    },
+    {
+      "parentCategoryId": 6,
+      "categoryId": 365,
+      "categoryName": "Speed Rings & Adapters"
+    },
+    {
+      "parentCategoryId": 6,
+      "categoryId": 367,
+      "categoryName": "Strobes"
+    },
+    {
+      "parentCategoryId": 6,
+      "categoryId": 368,
+      "categoryName": "Studio Equipment"
+    },
+    {
+      "parentCategoryId": 6,
+      "categoryId": 369,
+      "categoryName": "Tabletop Photography Equipment"
+    },
+    {
+      "parentCategoryId": 6,
+      "categoryId": 390,
+      "categoryName": "Modifiers"
+    },
+    {
+      "parentCategoryId": 7,
+      "categoryId": 394,
+      "categoryName": "Ring Lights"
+    },
+    {
+      "parentCategoryId": 8,
+      "categoryId": 376,
+      "categoryName": "Video Bags & Cases"
+    },
+    {
+      "parentCategoryId": 8,
+      "categoryId": 319,
+      "categoryName": "Bag & Case Accessories"
+    },
+    {
+      "parentCategoryId": 8,
+      "categoryId": 326,
+      "categoryName": "Camera Bags and Cases"
+    },
+    {
+      "parentCategoryId": 8,
+      "categoryId": 337,
+      "categoryName": "Lens and Filter Cases"
+    },
+    {
+      "parentCategoryId": 8,
+      "categoryId": 345,
+      "categoryName": "Lighting Bags & Cases"
+    },
+    {
+      "parentCategoryId": 8,
+      "categoryId": 359,
+      "categoryName": "Protective Wraps & Rain Covers , Tripod Cases"
+    },
+    {
+      "parentCategoryId": 10,
+      "categoryId": 397,
+      "categoryName": "Other Category"
+    }
+  ],
+  "subCategoriesList": [
+    {
+      "categoryId": 336,
+      "subCategoryId": 67,
+      "subCategoryName": "Lenses"
+    },
+    {
+      "categoryId": 336,
+      "subCategoryId": 68,
+      "subCategoryName": "Lens Accessories"
+    },
+    {
+      "categoryId": 389,
+      "subCategoryId": 1,
+      "subCategoryName": "Microphone Accessories"
+    },
+    {
+      "categoryId": 389,
+      "subCategoryId": 65,
+      "subCategoryName": "Wired Microphones"
+    },
+    {
+      "categoryId": 389,
+      "subCategoryId": 66,
+      "subCategoryName": "Wireless Microphones"
+    },
+    {
+      "categoryId": 390,
+      "subCategoryId": 69,
+      "subCategoryName": "Butterflies & Panels"
+    },
+    {
+      "categoryId": 390,
+      "subCategoryId": 70,
+      "subCategoryName": "Gels & Diffusion"
+    },
+    {
+      "categoryId": 390,
+      "subCategoryId": 71,
+      "subCategoryName": "Reflectors & Accessories"
+    },
+    {
+      "categoryId": 390,
+      "subCategoryId": 72,
+      "subCategoryName": "Umbrellas & Accessories"
+    },
+    {
+      "categoryId": 390,
+      "subCategoryId": 73,
+      "subCategoryName": "Softboxes & Accessories"
+    },
+    {
+      "categoryId": 390,
+      "subCategoryId": 74,
+      "subCategoryName": "Cucoloris, Scrims & Flags"
+    },
+    {
+      "categoryId": 390,
+      "subCategoryId": 75,
+      "subCategoryName": "Lenses & Gobos"
+    },
+    {
+      "categoryId": 398,
+      "subCategoryId": 76,
+      "subCategoryName": "Flashes & On-Camera Lightning"
+    }
+  ],
+  "attributeGroupList": [
+    {
+      "categoryId": null,
+      "attributeGroupId": 1,
+      "attributeGroupName": "zzzGroup"
+    },
+    {
+      "categoryId": 316,
+      "attributeGroupId": 3,
+      "attributeGroupName": "Action Cameras"
+    },
+    {
+      "categoryId": 316,
+      "attributeGroupId": 4,
+      "attributeGroupName": "Action Camera Mounts"
+    },
+    {
+      "categoryId": 316,
+      "attributeGroupId": 5,
+      "attributeGroupName": "Action Camera Lens Filters"
+    },
+    {
+      "categoryId": 316,
+      "attributeGroupId": 6,
+      "attributeGroupName": "Action Camera Accessories"
+    },
+    {
+      "categoryId": 317,
+      "attributeGroupId": 7,
+      "attributeGroupName": "Bulk Audio Cable"
+    },
+    {
+      "categoryId": 317,
+      "attributeGroupId": 8,
+      "attributeGroupName": "Audio Connectors"
+    },
+    {
+      "categoryId": 318,
+      "attributeGroupId": 9,
+      "attributeGroupName": "Recorder Accessories"
+    },
+    {
+      "categoryId": 318,
+      "attributeGroupId": 10,
+      "attributeGroupName": "Digital Field Recorders"
+    },
+    {
+      "categoryId": 319,
+      "attributeGroupId": 11,
+      "attributeGroupName": "Photography Belts & Harnesses"
+    },
+    {
+      "categoryId": 319,
+      "attributeGroupId": 12,
+      "attributeGroupName": "Video System Cases"
+    },
+    {
+      "categoryId": 319,
+      "attributeGroupId": 13,
+      "attributeGroupName": "Hard Case Accessories"
+    },
+    {
+      "categoryId": 319,
+      "attributeGroupId": 14,
+      "attributeGroupName": "Pockets"
+    },
+    {
+      "categoryId": 319,
+      "attributeGroupId": 15,
+      "attributeGroupName": "Inserts"
+    },
+    {
+      "categoryId": 319,
+      "attributeGroupId": 16,
+      "attributeGroupName": "Clips & Connectors"
+    },
+    {
+      "categoryId": 319,
+      "attributeGroupId": 17,
+      "attributeGroupName": "Luggage and Case Locks"
+    },
+    {
+      "categoryId": 319,
+      "attributeGroupId": 18,
+      "attributeGroupName": "Dividers"
+    },
+    {
+      "categoryId": 319,
+      "attributeGroupId": 19,
+      "attributeGroupName": "Organizers"
+    },
+    {
+      "categoryId": 319,
+      "attributeGroupId": 20,
+      "attributeGroupName": "Bag & Case Accessories"
+    },
+    {
+      "categoryId": 320,
+      "attributeGroupId": 21,
+      "attributeGroupName": "Battery Grips"
+    },
+    {
+      "categoryId": 321,
+      "attributeGroupId": 22,
+      "attributeGroupName": "Binoculars"
+    },
+    {
+      "categoryId": 321,
+      "attributeGroupId": 23,
+      "attributeGroupName": "Astronomy Binoculars"
+    },
+    {
+      "categoryId": 321,
+      "attributeGroupId": 24,
+      "attributeGroupName": "Solar Binoculars & Eclipse View"
+    },
+    {
+      "categoryId": 321,
+      "attributeGroupId": 25,
+      "attributeGroupName": "Binocular Accessories"
+    },
+    {
+      "categoryId": 321,
+      "attributeGroupId": 26,
+      "attributeGroupName": "Opera Glasses"
+    },
+    {
+      "categoryId": 321,
+      "attributeGroupId": 27,
+      "attributeGroupName": "Digital Camera Binoculars"
+    },
+    {
+      "categoryId": 323,
+      "attributeGroupId": 33,
+      "attributeGroupName": "Professional Camcorders"
+    },
+    {
+      "categoryId": 323,
+      "attributeGroupId": 34,
+      "attributeGroupName": "Consumer Camcorders"
+    },
+    {
+      "categoryId": 324,
+      "attributeGroupId": 35,
+      "attributeGroupName": "Battery Chargers"
+    },
+    {
+      "categoryId": 324,
+      "attributeGroupId": 36,
+      "attributeGroupName": "Battery"
+    },
+    {
+      "categoryId": 325,
+      "attributeGroupId": 37,
+      "attributeGroupName": "Body Supports for Video"
+    },
+    {
+      "categoryId": 325,
+      "attributeGroupId": 38,
+      "attributeGroupName": "Rod Support Systems"
+    },
+    {
+      "categoryId": 325,
+      "attributeGroupId": 39,
+      "attributeGroupName": "Support Rig Accessories"
+    },
+    {
+      "categoryId": 325,
+      "attributeGroupId": 40,
+      "attributeGroupName": "Handheld Supports & Accessories"
+    },
+    {
+      "categoryId": 325,
+      "attributeGroupId": 41,
+      "attributeGroupName": "Camera Dollies, Stands & Pedest"
+    },
+    {
+      "categoryId": 325,
+      "attributeGroupId": 42,
+      "attributeGroupName": "Dolly, Stand & Pedestal Accesso"
+    },
+    {
+      "categoryId": 325,
+      "attributeGroupId": 43,
+      "attributeGroupName": "Cranes & Jib Accessories"
+    },
+    {
+      "categoryId": 325,
+      "attributeGroupId": 44,
+      "attributeGroupName": "Cranes & Booms & Jibs"
+    },
+    {
+      "categoryId": 325,
+      "attributeGroupId": 45,
+      "attributeGroupName": "Camera Stands & Pedestals"
+    },
+    {
+      "categoryId": 325,
+      "attributeGroupId": 362,
+      "attributeGroupName": "Handheld Gimbal Stabilizers "
+    },
+    {
+      "categoryId": 326,
+      "attributeGroupId": 360,
+      "attributeGroupName": "Hard Cases"
+    },
+    {
+      "categoryId": 326,
+      "attributeGroupId": 46,
+      "attributeGroupName": "Camera Backpacks"
+    },
+    {
+      "categoryId": 326,
+      "attributeGroupId": 47,
+      "attributeGroupName": "Camera Cases"
+    },
+    {
+      "categoryId": 326,
+      "attributeGroupId": 48,
+      "attributeGroupName": "Camera Shoulder Bags"
+    },
+    {
+      "categoryId": 326,
+      "attributeGroupId": 49,
+      "attributeGroupName": "Camera Waist Packs"
+    },
+    {
+      "categoryId": 326,
+      "attributeGroupId": 50,
+      "attributeGroupName": "Fashion Camera Bags"
+    },
+    {
+      "categoryId": 326,
+      "attributeGroupId": 51,
+      "attributeGroupName": "Camera Insert Bags"
+    },
+    {
+      "categoryId": 326,
+      "attributeGroupId": 52,
+      "attributeGroupName": "Camera Sling Bags"
+    },
+    {
+      "categoryId": 326,
+      "attributeGroupId": 53,
+      "attributeGroupName": "Rolling Camera Cases"
+    },
+    {
+      "categoryId": 327,
+      "attributeGroupId": 54,
+      "attributeGroupName": "Digital Point & Shoot Cameras"
+    },
+    {
+      "categoryId": 327,
+      "attributeGroupId": 55,
+      "attributeGroupName": "Mirrorless Cameras"
+    },
+    {
+      "categoryId": 327,
+      "attributeGroupId": 56,
+      "attributeGroupName": "Instant Cameras"
+    },
+    {
+      "categoryId": 327,
+      "attributeGroupId": 57,
+      "attributeGroupName": "Digital SLR Cameras"
+    },
+    {
+      "categoryId": 327,
+      "attributeGroupId": 58,
+      "attributeGroupName": "Medium Format Cameras"
+    },
+    {
+      "categoryId": 327,
+      "attributeGroupId": 59,
+      "attributeGroupName": "Specialty Cameras"
+    },
+    {
+      "categoryId": 328,
+      "attributeGroupId": 60,
+      "attributeGroupName": "LED Lighting"
+    },
+    {
+      "categoryId": 328,
+      "attributeGroupId": 61,
+      "attributeGroupName": "HMI & Plasma Lights"
+    },
+    {
+      "categoryId": 328,
+      "attributeGroupId": 62,
+      "attributeGroupName": "Tungsten Lighting"
+    },
+    {
+      "categoryId": 328,
+      "attributeGroupId": 63,
+      "attributeGroupName": "Fluorescent Lighting"
+    },
+    {
+      "categoryId": 329,
+      "attributeGroupId": 64,
+      "attributeGroupName": "Cucoloris, Scrims & Flags"
+    },
+    {
+      "categoryId": 330,
+      "attributeGroupId": 65,
+      "attributeGroupName": "Coaxial SPDIF Cables"
+    },
+    {
+      "categoryId": 330,
+      "attributeGroupId": 66,
+      "attributeGroupName": "MIDI Cables"
+    },
+    {
+      "categoryId": 330,
+      "attributeGroupId": 67,
+      "attributeGroupName": "FireWire Cables & Adapters (IEE"
+    },
+    {
+      "categoryId": 330,
+      "attributeGroupId": 68,
+      "attributeGroupName": "AESEBU Cables"
+    },
+    {
+      "categoryId": 330,
+      "attributeGroupId": 69,
+      "attributeGroupName": "Optical (Toslink) Cables"
+    },
+    {
+      "categoryId": 331,
+      "attributeGroupId": 70,
+      "attributeGroupName": "Neutral Density"
+    },
+    {
+      "categoryId": 331,
+      "attributeGroupId": 71,
+      "attributeGroupName": "Image Softening Filters"
+    },
+    {
+      "categoryId": 331,
+      "attributeGroupId": 72,
+      "attributeGroupName": "Protective UV"
+    },
+    {
+      "categoryId": 331,
+      "attributeGroupId": 73,
+      "attributeGroupName": "Filter Kit"
+    },
+    {
+      "categoryId": 331,
+      "attributeGroupId": 74,
+      "attributeGroupName": "Polarizing Filter"
+    },
+    {
+      "categoryId": 331,
+      "attributeGroupId": 75,
+      "attributeGroupName": "Filter Adapter"
+    },
+    {
+      "categoryId": 331,
+      "attributeGroupId": 76,
+      "attributeGroupName": "Step Down Rings"
+    },
+    {
+      "categoryId": 331,
+      "attributeGroupId": 77,
+      "attributeGroupName": "Filter Holder"
+    },
+    {
+      "categoryId": 331,
+      "attributeGroupId": 78,
+      "attributeGroupName": "Step Up Rings"
+    },
+    {
+      "categoryId": 331,
+      "attributeGroupId": 79,
+      "attributeGroupName": "Filter Caps"
+    },
+    {
+      "categoryId": 331,
+      "attributeGroupId": 80,
+      "attributeGroupName": "Filter Wrenches"
+    },
+    {
+      "categoryId": 332,
+      "attributeGroupId": 81,
+      "attributeGroupName": "Follow Focus Systems"
+    },
+    {
+      "categoryId": 332,
+      "attributeGroupId": 82,
+      "attributeGroupName": "Follow Focus Accessories"
+    },
+    {
+      "categoryId": 332,
+      "attributeGroupId": 83,
+      "attributeGroupName": "Focus Drive Gears"
+    },
+    {
+      "categoryId": 332,
+      "attributeGroupId": 84,
+      "attributeGroupName": "Video Lens Support"
+    },
+    {
+      "categoryId": 332,
+      "attributeGroupId": 85,
+      "attributeGroupName": "Focus Gear Rings"
+    },
+    {
+      "categoryId": 333,
+      "attributeGroupId": 86,
+      "attributeGroupName": "Arms"
+    },
+    {
+      "categoryId": 333,
+      "attributeGroupId": 87,
+      "attributeGroupName": "Clamps"
+    },
+    {
+      "categoryId": 333,
+      "attributeGroupId": 88,
+      "attributeGroupName": "Grips Heads"
+    },
+    {
+      "categoryId": 334,
+      "attributeGroupId": 89,
+      "attributeGroupName": "Wireless & Bluetooth Headphones"
+    },
+    {
+      "categoryId": 334,
+      "attributeGroupId": 90,
+      "attributeGroupName": "Earphones & Earbuds"
+    },
+    {
+      "categoryId": 334,
+      "attributeGroupId": 91,
+      "attributeGroupName": "DJ & Studio Headphones"
+    },
+    {
+      "categoryId": 334,
+      "attributeGroupId": 92,
+      "attributeGroupName": "Headphones"
+    },
+    {
+      "categoryId": 334,
+      "attributeGroupId": 93,
+      "attributeGroupName": "Computer Headsets"
+    },
+    {
+      "categoryId": 334,
+      "attributeGroupId": 94,
+      "attributeGroupName": "Performance Hearing Protection"
+    },
+    {
+      "categoryId": 336,
+      "attributeGroupId": 99,
+      "attributeGroupName": "Lens Covers"
+    },
+    {
+      "categoryId": 336,
+      "attributeGroupId": 100,
+      "attributeGroupName": "Conversion Lenses"
+    },
+    {
+      "categoryId": 336,
+      "attributeGroupId": 101,
+      "attributeGroupName": "Point & Shoot Add-On Lenses"
+    },
+    {
+      "categoryId": 336,
+      "attributeGroupId": 102,
+      "attributeGroupName": "Extension Tubes"
+    },
+    {
+      "categoryId": 336,
+      "attributeGroupId": 103,
+      "attributeGroupName": "Lens Bumpers"
+    },
+    {
+      "categoryId": 336,
+      "attributeGroupId": 104,
+      "attributeGroupName": "Reversing Rings"
+    },
+    {
+      "categoryId": 336,
+      "attributeGroupId": 105,
+      "attributeGroupName": "Lens Supports"
+    },
+    {
+      "categoryId": 336,
+      "attributeGroupId": 110,
+      "attributeGroupName": "Lens Mount Adapters"
+    },
+    {
+      "categoryId": 336,
+      "attributeGroupId": 111,
+      "attributeGroupName": "Mirrorless Lenses"
+    },
+    {
+      "categoryId": 336,
+      "attributeGroupId": 112,
+      "attributeGroupName": "SLR Lenses"
+    },
+    {
+      "categoryId": 336,
+      "attributeGroupId": 113,
+      "attributeGroupName": "Special Effect Lenses"
+    },
+    {
+      "categoryId": 336,
+      "attributeGroupId": 114,
+      "attributeGroupName": "Medium Format Lenses"
+    },
+    {
+      "categoryId": 336,
+      "attributeGroupId": 115,
+      "attributeGroupName": "Rangefinder Lenses"
+    },
+    {
+      "categoryId": 336,
+      "attributeGroupId": 116,
+      "attributeGroupName": "Specialty Lenses"
+    },
+    {
+      "categoryId": 337,
+      "attributeGroupId": 106,
+      "attributeGroupName": "Lens Cases"
+    },
+    {
+      "categoryId": 337,
+      "attributeGroupId": 107,
+      "attributeGroupName": "Filter Cases"
+    },
+    {
+      "categoryId": 338,
+      "attributeGroupId": 108,
+      "attributeGroupName": "Lens Hoods"
+    },
+    {
+      "categoryId": 338,
+      "attributeGroupId": 109,
+      "attributeGroupName": "Lens Caps"
+    },
+    {
+      "categoryId": 340,
+      "attributeGroupId": 117,
+      "attributeGroupName": "Lenses & Gobos"
+    },
+    {
+      "categoryId": 341,
+      "attributeGroupId": 118,
+      "attributeGroupName": "Mounting Hardware"
+    },
+    {
+      "categoryId": 341,
+      "attributeGroupId": 119,
+      "attributeGroupName": "Remotes & Light Controllers"
+    },
+    {
+      "categoryId": 341,
+      "attributeGroupId": 120,
+      "attributeGroupName": "Socket & Cord Sets"
+    },
+    {
+      "categoryId": 341,
+      "attributeGroupId": 121,
+      "attributeGroupName": "Safety Accessories"
+    },
+    {
+      "categoryId": 341,
+      "attributeGroupId": 364,
+      "attributeGroupName": "Flashes Battery"
+    },
+    {
+      "categoryId": 342,
+      "attributeGroupId": 122,
+      "attributeGroupName": "Light Booms & Stands"
+    },
+    {
+      "categoryId": 343,
+      "attributeGroupId": 123,
+      "attributeGroupName": "Light meters"
+    },
+    {
+      "categoryId": 344,
+      "attributeGroupId": 124,
+      "attributeGroupName": "Weight Bags"
+    },
+    {
+      "categoryId": 344,
+      "attributeGroupId": 125,
+      "attributeGroupName": "Adapters"
+    },
+    {
+      "categoryId": 344,
+      "attributeGroupId": 126,
+      "attributeGroupName": "Special Accessory"
+    },
+    {
+      "categoryId": 344,
+      "attributeGroupId": 127,
+      "attributeGroupName": "Casters & Wheels"
+    },
+    {
+      "categoryId": 344,
+      "attributeGroupId": 128,
+      "attributeGroupName": "Columns and Risers"
+    },
+    {
+      "categoryId": 344,
+      "attributeGroupId": 129,
+      "attributeGroupName": "Light Stand Bases"
+    },
+    {
+      "categoryId": 344,
+      "attributeGroupId": 130,
+      "attributeGroupName": "Light Stand Extensions"
+    },
+    {
+      "categoryId": 345,
+      "attributeGroupId": 131,
+      "attributeGroupName": "Lighting System Bags & Cases"
+    },
+    {
+      "categoryId": 345,
+      "attributeGroupId": 132,
+      "attributeGroupName": "Lighting Accessory Bags & Cases"
+    },
+    {
+      "categoryId": 345,
+      "attributeGroupId": 133,
+      "attributeGroupName": "Light Stand Cases"
+    },
+    {
+      "categoryId": 345,
+      "attributeGroupId": 134,
+      "attributeGroupName": "FlashBags and Cases"
+    },
+    {
+      "categoryId": 346,
+      "attributeGroupId": 135,
+      "attributeGroupName": "Color Effects Filters & Gels"
+    },
+    {
+      "categoryId": 346,
+      "attributeGroupId": 136,
+      "attributeGroupName": "Diffusers & Diffusion Material"
+    },
+    {
+      "categoryId": 346,
+      "attributeGroupId": 137,
+      "attributeGroupName": "Color Correction Filters & Gels"
+    },
+    {
+      "categoryId": 346,
+      "attributeGroupId": 138,
+      "attributeGroupName": "Frames & Holders"
+    },
+    {
+      "categoryId": 346,
+      "attributeGroupId": 139,
+      "attributeGroupName": "Filter & Gel Accessories"
+    },
+    {
+      "categoryId": 347,
+      "attributeGroupId": 140,
+      "attributeGroupName": "Power Pack Strobes"
+    },
+    {
+      "categoryId": 347,
+      "attributeGroupId": 141,
+      "attributeGroupName": "Ballasts"
+    },
+    {
+      "categoryId": 347,
+      "attributeGroupId": 142,
+      "attributeGroupName": "Cables"
+    },
+    {
+      "categoryId": 347,
+      "attributeGroupId": 143,
+      "attributeGroupName": "Power Inverters"
+    },
+    {
+      "categoryId": 347,
+      "attributeGroupId": 144,
+      "attributeGroupName": "AC Power Supplies"
+    },
+    {
+      "categoryId": 347,
+      "attributeGroupId": 145,
+      "attributeGroupName": "Battery Adapter Plates"
+    },
+    {
+      "categoryId": 347,
+      "attributeGroupId": 146,
+      "attributeGroupName": "DC Power Supplies"
+    },
+    {
+      "categoryId": 347,
+      "attributeGroupId": 147,
+      "attributeGroupName": "Lighting Batteries"
+    },
+    {
+      "categoryId": 347,
+      "attributeGroupId": 148,
+      "attributeGroupName": "Lighting Chargers"
+    },
+    {
+      "categoryId": 347,
+      "attributeGroupId": 149,
+      "attributeGroupName": "Power Adapters"
+    },
+    {
+      "categoryId": 347,
+      "attributeGroupId": 150,
+      "attributeGroupName": "Booster Module"
+    },
+    {
+      "categoryId": 348,
+      "attributeGroupId": 151,
+      "attributeGroupName": "Macro , Ring Flash"
+    },
+    {
+      "categoryId": 349,
+      "attributeGroupId": 152,
+      "attributeGroupName": "Memory Cards"
+    },
+    {
+      "categoryId": 349,
+      "attributeGroupId": 153,
+      "attributeGroupName": "Card Reader"
+    },
+    {
+      "categoryId": 350,
+      "attributeGroupId": 154,
+      "attributeGroupName": "Microphone Cables & Adapters"
+    },
+    {
+      "categoryId": 350,
+      "attributeGroupId": 155,
+      "attributeGroupName": "Boom Poles, Mic Mounts, & Other"
+    },
+    {
+      "categoryId": 350,
+      "attributeGroupId": 156,
+      "attributeGroupName": "Antennas & Accessories"
+    },
+    {
+      "categoryId": 350,
+      "attributeGroupId": 157,
+      "attributeGroupName": "Microphone Mounts"
+    },
+    {
+      "categoryId": 350,
+      "attributeGroupId": 158,
+      "attributeGroupName": "Windscreens & Pop Filters"
+    },
+    {
+      "categoryId": 350,
+      "attributeGroupId": 159,
+      "attributeGroupName": "Stands"
+    },
+    {
+      "categoryId": 350,
+      "attributeGroupId": 160,
+      "attributeGroupName": "Desktop Microphone Stands"
+    },
+    {
+      "categoryId": 350,
+      "attributeGroupId": 161,
+      "attributeGroupName": "Microphone Power Supplies"
+    },
+    {
+      "categoryId": 351,
+      "attributeGroupId": 162,
+      "attributeGroupName": "Mobile Photography Audio"
+    },
+    {
+      "categoryId": 351,
+      "attributeGroupId": 163,
+      "attributeGroupName": "Mobile Photography Support"
+    },
+    {
+      "categoryId": 351,
+      "attributeGroupId": 164,
+      "attributeGroupName": "Mobile Photography Lenses & Adapters"
+    },
+    {
+      "categoryId": 351,
+      "attributeGroupId": 165,
+      "attributeGroupName": "Mobile Photography Lighting"
+    },
+    {
+      "categoryId": 352,
+      "attributeGroupId": 166,
+      "attributeGroupName": "On-Camera Video Monitors"
+    },
+    {
+      "categoryId": 352,
+      "attributeGroupId": 167,
+      "attributeGroupName": "Production Monitors"
+    },
+    {
+      "categoryId": 352,
+      "attributeGroupId": 168,
+      "attributeGroupName": "Video Monitor Power"
+    },
+    {
+      "categoryId": 352,
+      "attributeGroupId": 169,
+      "attributeGroupName": "Monitor & Viewfinder Mounting"
+    },
+    {
+      "categoryId": 352,
+      "attributeGroupId": 170,
+      "attributeGroupName": "Monitor Controls & Cables"
+    },
+    {
+      "categoryId": 352,
+      "attributeGroupId": 171,
+      "attributeGroupName": "Monitor Hoods"
+    },
+    {
+      "categoryId": 352,
+      "attributeGroupId": 172,
+      "attributeGroupName": "Monitor Screen Protection"
+    },
+    {
+      "categoryId": 352,
+      "attributeGroupId": 173,
+      "attributeGroupName": "Monitor Color Calibration"
+    },
+    {
+      "categoryId": 353,
+      "attributeGroupId": 174,
+      "attributeGroupName": "Monolights"
+    },
+    {
+      "categoryId": 353,
+      "attributeGroupId": 175,
+      "attributeGroupName": "Monolight Batteries"
+    },
+    {
+      "categoryId": 353,
+      "attributeGroupId": 176,
+      "attributeGroupName": "Replacement Parts & Fuses"
+    },
+    {
+      "categoryId": 354,
+      "attributeGroupId": 177,
+      "attributeGroupName": "Monopods"
+    },
+    {
+      "categoryId": 354,
+      "attributeGroupId": 178,
+      "attributeGroupName": "Monopod Accessories"
+    },
+    {
+      "categoryId": 355,
+      "attributeGroupId": 179,
+      "attributeGroupName": "Studs  Pins"
+    },
+    {
+      "categoryId": 355,
+      "attributeGroupId": 180,
+      "attributeGroupName": "ConvertersThread Adapters"
+    },
+    {
+      "categoryId": 355,
+      "attributeGroupId": 181,
+      "attributeGroupName": "Brackets"
+    },
+    {
+      "categoryId": 355,
+      "attributeGroupId": 182,
+      "attributeGroupName": "Hooks & Hangers"
+    },
+    {
+      "categoryId": 355,
+      "attributeGroupId": 183,
+      "attributeGroupName": "Wall Plates"
+    },
+    {
+      "categoryId": 355,
+      "attributeGroupId": 184,
+      "attributeGroupName": "Foam Board Holders"
+    },
+    {
+      "categoryId": 355,
+      "attributeGroupId": 185,
+      "attributeGroupName": "Special Accessory"
+    },
+    {
+      "categoryId": 355,
+      "attributeGroupId": 186,
+      "attributeGroupName": "Cable & Strapping"
+    },
+    {
+      "categoryId": 355,
+      "attributeGroupId": 187,
+      "attributeGroupName": "Camera Platforms"
+    },
+    {
+      "categoryId": 356,
+      "attributeGroupId": 188,
+      "attributeGroupName": "Suction Mounts"
+    },
+    {
+      "categoryId": 356,
+      "attributeGroupId": 189,
+      "attributeGroupName": "Hi Hat Mounts"
+    },
+    {
+      "categoryId": 356,
+      "attributeGroupId": 190,
+      "attributeGroupName": "Car Mounts"
+    },
+    {
+      "categoryId": 356,
+      "attributeGroupId": 191,
+      "attributeGroupName": "Clamp & Screw Mounts"
+    },
+    {
+      "categoryId": 356,
+      "attributeGroupId": 192,
+      "attributeGroupName": "Magnetic Mounts"
+    },
+    {
+      "categoryId": 357,
+      "attributeGroupId": 193,
+      "attributeGroupName": "Camera Slaves"
+    },
+    {
+      "categoryId": 357,
+      "attributeGroupId": 194,
+      "attributeGroupName": "Slave Flashes"
+    },
+    {
+      "categoryId": 357,
+      "attributeGroupId": 195,
+      "attributeGroupName": "Slave Accessories"
+    },
+    {
+      "categoryId": 358,
+      "attributeGroupId": 196,
+      "attributeGroupName": "Studio & ENG Cameras"
+    },
+    {
+      "categoryId": 358,
+      "attributeGroupId": 197,
+      "attributeGroupName": "Digital Cinema Bodies"
+    },
+    {
+      "categoryId": 359,
+      "attributeGroupId": 198,
+      "attributeGroupName": "Tripod Bags & Cases"
+    },
+    {
+      "categoryId": 359,
+      "attributeGroupId": 199,
+      "attributeGroupName": "Camera Rain Covers"
+    },
+    {
+      "categoryId": 359,
+      "attributeGroupId": 200,
+      "attributeGroupName": "Rain Cover Accessories"
+    },
+    {
+      "categoryId": 359,
+      "attributeGroupId": 201,
+      "attributeGroupName": "Wraps"
+    },
+    {
+      "categoryId": 359,
+      "attributeGroupId": 202,
+      "attributeGroupName": "Bag Rain Covers"
+    },
+    {
+      "categoryId": 360,
+      "attributeGroupId": 203,
+      "attributeGroupName": "Quick Release Plates"
+    },
+    {
+      "categoryId": 360,
+      "attributeGroupId": 204,
+      "attributeGroupName": "Quick Release Clamps"
+    },
+    {
+      "categoryId": 360,
+      "attributeGroupId": 205,
+      "attributeGroupName": "Quick Release Systems"
+    },
+    {
+      "categoryId": 360,
+      "attributeGroupId": 206,
+      "attributeGroupName": "Quick Release Accessories"
+    },
+    {
+      "categoryId": 360,
+      "attributeGroupId": 207,
+      "attributeGroupName": "L-Brackets"
+    },
+    {
+      "categoryId": 361,
+      "attributeGroupId": 208,
+      "attributeGroupName": "Railing Systems & Components"
+    },
+    {
+      "categoryId": 362,
+      "attributeGroupId": 209,
+      "attributeGroupName": "Barndoors"
+    },
+    {
+      "categoryId": 362,
+      "attributeGroupId": 210,
+      "attributeGroupName": "Honeycomb & Grids"
+    },
+    {
+      "categoryId": 362,
+      "attributeGroupId": 211,
+      "attributeGroupName": "Reflectors"
+    },
+    {
+      "categoryId": 362,
+      "attributeGroupId": 212,
+      "attributeGroupName": "Snoots"
+    },
+    {
+      "categoryId": 363,
+      "attributeGroupId": 213,
+      "attributeGroupName": "Camera Cleaning Supplies"
+    },
+    {
+      "categoryId": 363,
+      "attributeGroupId": 214,
+      "attributeGroupName": "Remotes"
+    },
+    {
+      "categoryId": 363,
+      "attributeGroupId": 215,
+      "attributeGroupName": "Teleconverter"
+    },
+    {
+      "categoryId": 364,
+      "attributeGroupId": 216,
+      "attributeGroupName": "Softboxes"
+    },
+    {
+      "categoryId": 364,
+      "attributeGroupId": 217,
+      "attributeGroupName": "Softbox Accessories"
+    },
+    {
+      "categoryId": 365,
+      "attributeGroupId": 218,
+      "attributeGroupName": "Speed Rings & Adapters"
+    },
+    {
+      "categoryId": 366,
+      "attributeGroupId": 219,
+      "attributeGroupName": "Straps"
+    },
+    {
+      "categoryId": 367,
+      "attributeGroupId": 220,
+      "attributeGroupName": "Monolights"
+    },
+    {
+      "categoryId": 367,
+      "attributeGroupId": 221,
+      "attributeGroupName": "Monolight Batteries"
+    },
+    {
+      "categoryId": 367,
+      "attributeGroupId": 222,
+      "attributeGroupName": "Replacement Parts & Fuses"
+    },
+    {
+      "categoryId": 368,
+      "attributeGroupId": 223,
+      "attributeGroupName": "Gaffer Tape"
+    },
+    {
+      "categoryId": 368,
+      "attributeGroupId": 224,
+      "attributeGroupName": "Props & Special Effects"
+    },
+    {
+      "categoryId": 368,
+      "attributeGroupId": 225,
+      "attributeGroupName": "Apple Boxes"
+    },
+    {
+      "categoryId": 368,
+      "attributeGroupId": 226,
+      "attributeGroupName": "Photo Booths"
+    },
+    {
+      "categoryId": 368,
+      "attributeGroupId": 227,
+      "attributeGroupName": "Paints & Scenic Treatments"
+    },
+    {
+      "categoryId": 368,
+      "attributeGroupId": 228,
+      "attributeGroupName": "Studio Equipment"
+    },
+    {
+      "categoryId": 369,
+      "attributeGroupId": 229,
+      "attributeGroupName": "Product Turntables"
+    },
+    {
+      "categoryId": 369,
+      "attributeGroupId": 230,
+      "attributeGroupName": "Turntable Accessories"
+    },
+    {
+      "categoryId": 369,
+      "attributeGroupId": 231,
+      "attributeGroupName": "Copy Stands & Lights"
+    },
+    {
+      "categoryId": 369,
+      "attributeGroupId": 232,
+      "attributeGroupName": "Shooting Tables"
+    },
+    {
+      "categoryId": 369,
+      "attributeGroupId": 233,
+      "attributeGroupName": "Shooting Tents"
+    },
+    {
+      "categoryId": 370,
+      "attributeGroupId": 234,
+      "attributeGroupName": "Teleprompters"
+    },
+    {
+      "categoryId": 370,
+      "attributeGroupId": 235,
+      "attributeGroupName": "Teleprompter Controllers"
+    },
+    {
+      "categoryId": 370,
+      "attributeGroupId": 236,
+      "attributeGroupName": "Teleprompting Software & Access"
+    },
+    {
+      "categoryId": 371,
+      "attributeGroupId": 237,
+      "attributeGroupName": "Video Heads"
+    },
+    {
+      "categoryId": 371,
+      "attributeGroupId": 238,
+      "attributeGroupName": "Ball Heads"
+    },
+    {
+      "categoryId": 371,
+      "attributeGroupId": 239,
+      "attributeGroupName": "Tripod Head Accessories"
+    },
+    {
+      "categoryId": 371,
+      "attributeGroupId": 240,
+      "attributeGroupName": "Panoramic & Rotator Heads"
+    },
+    {
+      "categoryId": 371,
+      "attributeGroupId": 241,
+      "attributeGroupName": "Pistol Grip Heads"
+    },
+    {
+      "categoryId": 371,
+      "attributeGroupId": 242,
+      "attributeGroupName": "Gimbal Heads"
+    },
+    {
+      "categoryId": 371,
+      "attributeGroupId": 243,
+      "attributeGroupName": "Pan & Tilt Heads"
+    },
+    {
+      "categoryId": 372,
+      "attributeGroupId": 244,
+      "attributeGroupName": "Tripods"
+    },
+    {
+      "categoryId": 372,
+      "attributeGroupId": 245,
+      "attributeGroupName": "Tripod Legs"
+    },
+    {
+      "categoryId": 372,
+      "attributeGroupId": 246,
+      "attributeGroupName": "Video Tripods"
+    },
+    {
+      "categoryId": 372,
+      "attributeGroupId": 247,
+      "attributeGroupName": "Tripod Accessories"
+    },
+    {
+      "categoryId": 373,
+      "attributeGroupId": 248,
+      "attributeGroupName": "Trussing Equipment"
+    },
+    {
+      "categoryId": 374,
+      "attributeGroupId": 249,
+      "attributeGroupName": "Umbrella Mounts"
+    },
+    {
+      "categoryId": 375,
+      "attributeGroupId": 250,
+      "attributeGroupName": "Umbrellas"
+    },
+    {
+      "categoryId": 375,
+      "attributeGroupId": 251,
+      "attributeGroupName": "Umbrella Accessories"
+    },
+    {
+      "categoryId": 376,
+      "attributeGroupId": 252,
+      "attributeGroupName": "Video Backpacks"
+    },
+    {
+      "categoryId": 376,
+      "attributeGroupId": 253,
+      "attributeGroupName": "Rain Covers"
+    },
+    {
+      "categoryId": 376,
+      "attributeGroupId": 254,
+      "attributeGroupName": "Camcorder Cases"
+    },
+    {
+      "categoryId": 376,
+      "attributeGroupId": 255,
+      "attributeGroupName": "Video Waist Packs"
+    },
+    {
+      "categoryId": 377,
+      "attributeGroupId": 256,
+      "attributeGroupName": "Video Format Converters"
+    },
+    {
+      "categoryId": 377,
+      "attributeGroupId": 257,
+      "attributeGroupName": "Video Capture"
+    },
+    {
+      "categoryId": 377,
+      "attributeGroupId": 258,
+      "attributeGroupName": "Pro Video Players & Recorders"
+    },
+    {
+      "categoryId": 378,
+      "attributeGroupId": 259,
+      "attributeGroupName": "Video Editing Controllers"
+    },
+    {
+      "categoryId": 379,
+      "attributeGroupId": 260,
+      "attributeGroupName": "Digital Cinema Lenses"
+    },
+    {
+      "categoryId": 379,
+      "attributeGroupId": 261,
+      "attributeGroupName": "Video Controls & Accessories"
+    },
+    {
+      "categoryId": 379,
+      "attributeGroupId": 262,
+      "attributeGroupName": "Studio Camera Lenses"
+    },
+    {
+      "categoryId": 379,
+      "attributeGroupId": 263,
+      "attributeGroupName": "Lens Attachments & Adapters"
+    },
+    {
+      "categoryId": 379,
+      "attributeGroupId": 264,
+      "attributeGroupName": "Professional Lenses"
+    },
+    {
+      "categoryId": 379,
+      "attributeGroupId": 265,
+      "attributeGroupName": "Video Lens Accessories"
+    },
+    {
+      "categoryId": 380,
+      "attributeGroupId": 266,
+      "attributeGroupName": "On Camera LED Video Lights"
+    },
+    {
+      "categoryId": 380,
+      "attributeGroupId": 267,
+      "attributeGroupName": "Replacement Lamps & Bulbs"
+    },
+    {
+      "categoryId": 380,
+      "attributeGroupId": 268,
+      "attributeGroupName": "Video Lighting Batteries & Powe"
+    },
+    {
+      "categoryId": 380,
+      "attributeGroupId": 269,
+      "attributeGroupName": "Light Heads & Bulb Lighting"
+    },
+    {
+      "categoryId": 380,
+      "attributeGroupId": 270,
+      "attributeGroupName": "Universal Power Supplies"
+    },
+    {
+      "categoryId": 380,
+      "attributeGroupId": 271,
+      "attributeGroupName": "Video Light Accessories"
+    },
+    {
+      "categoryId": 380,
+      "attributeGroupId": 272,
+      "attributeGroupName": "Video Light Modifiers"
+    },
+    {
+      "categoryId": 380,
+      "attributeGroupId": 273,
+      "attributeGroupName": "Video Light Mounting"
+    },
+    {
+      "categoryId": 381,
+      "attributeGroupId": 274,
+      "attributeGroupName": "Video Memory Cards"
+    },
+    {
+      "categoryId": 382,
+      "attributeGroupId": 275,
+      "attributeGroupName": "Video Battery & Camcorder Charg"
+    },
+    {
+      "categoryId": 382,
+      "attributeGroupId": 276,
+      "attributeGroupName": "Camcorder Batteries"
+    },
+    {
+      "categoryId": 382,
+      "attributeGroupId": 277,
+      "attributeGroupName": "Video Cables & Adapters"
+    },
+    {
+      "categoryId": 382,
+      "attributeGroupId": 278,
+      "attributeGroupName": "Battery Adapters & Mounts"
+    },
+    {
+      "categoryId": 382,
+      "attributeGroupId": 279,
+      "attributeGroupName": "Replacement Video Power Supplie"
+    },
+    {
+      "categoryId": 382,
+      "attributeGroupId": 280,
+      "attributeGroupName": "Video Battery Packs & Belts"
+    },
+    {
+      "categoryId": 383,
+      "attributeGroupId": 281,
+      "attributeGroupName": "Video Switchers & Components"
+    },
+    {
+      "categoryId": 383,
+      "attributeGroupId": 282,
+      "attributeGroupName": "Multimedia Mixers & Live Produc"
+    },
+    {
+      "categoryId": 383,
+      "attributeGroupId": 283,
+      "attributeGroupName": "Video Distribution Amplifiers &"
+    },
+    {
+      "categoryId": 384,
+      "attributeGroupId": 284,
+      "attributeGroupName": "Video Viewfinders"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 285,
+      "attributeGroupName": "360 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 286,
+      "attributeGroupName": "360 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 287,
+      "attributeGroupName": "360 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 288,
+      "attributeGroupName": "Professional 360 Cameras"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 289,
+      "attributeGroupName": "360 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 290,
+      "attributeGroupName": "360 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 291,
+      "attributeGroupName": "360 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 292,
+      "attributeGroupName": "360 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 293,
+      "attributeGroupName": "360 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 294,
+      "attributeGroupName": "360 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 295,
+      "attributeGroupName": "360 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 296,
+      "attributeGroupName": "360 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 297,
+      "attributeGroupName": "360 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 298,
+      "attributeGroupName": "360 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 299,
+      "attributeGroupName": "360 Camera Accessories"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 300,
+      "attributeGroupName": "360 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 301,
+      "attributeGroupName": "396 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 302,
+      "attributeGroupName": "397 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 303,
+      "attributeGroupName": "Consumer 360 Video Cameras"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 304,
+      "attributeGroupName": "398 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 305,
+      "attributeGroupName": "399 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 306,
+      "attributeGroupName": "400 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 307,
+      "attributeGroupName": "401 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 308,
+      "attributeGroupName": "402 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 309,
+      "attributeGroupName": "403 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 310,
+      "attributeGroupName": "404 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 311,
+      "attributeGroupName": "VR Headsets & Accessories"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 312,
+      "attributeGroupName": "371 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 313,
+      "attributeGroupName": "361 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 314,
+      "attributeGroupName": "361 Camera Accessories"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 315,
+      "attributeGroupName": "362 Camera Accessories"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 316,
+      "attributeGroupName": "362 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 317,
+      "attributeGroupName": "372 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 318,
+      "attributeGroupName": "363 Camera Accessories"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 319,
+      "attributeGroupName": "363 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 320,
+      "attributeGroupName": "364 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 321,
+      "attributeGroupName": "364 Camera Accessories"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 322,
+      "attributeGroupName": "373 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 323,
+      "attributeGroupName": "377 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 324,
+      "attributeGroupName": "365 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 325,
+      "attributeGroupName": "366 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 326,
+      "attributeGroupName": "365 Camera Accessories"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 327,
+      "attributeGroupName": "378 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 328,
+      "attributeGroupName": "367 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 329,
+      "attributeGroupName": "366 Camera Accessories"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 330,
+      "attributeGroupName": "379 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 331,
+      "attributeGroupName": "374 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 332,
+      "attributeGroupName": "368 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 333,
+      "attributeGroupName": "369 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 334,
+      "attributeGroupName": "367 Camera Accessories"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 335,
+      "attributeGroupName": "370 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 336,
+      "attributeGroupName": "380 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 337,
+      "attributeGroupName": "368 Camera Accessories"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 338,
+      "attributeGroupName": "369 Camera Accessories"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 339,
+      "attributeGroupName": "375 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 340,
+      "attributeGroupName": "381 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 341,
+      "attributeGroupName": "382 Camera Mounts"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 342,
+      "attributeGroupName": "370 Camera Accessories"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 343,
+      "attributeGroupName": "371 Camera Accessories"
+    },
+    {
+      "categoryId": 385,
+      "attributeGroupId": 344,
+      "attributeGroupName": "376 Camera Mounts"
+    },
+    {
+      "categoryId": 387,
+      "attributeGroupId": 352,
+      "attributeGroupName": "Wireless Video Transmission sys"
+    },
+    {
+      "categoryId": 387,
+      "attributeGroupId": 353,
+      "attributeGroupName": "Sync & Signal Generation"
+    },
+    {
+      "categoryId": 387,
+      "attributeGroupId": 354,
+      "attributeGroupName": "Encoders & Controls"
+    },
+    {
+      "categoryId": 389,
+      "attributeGroupId": 355,
+      "attributeGroupName": "Wireless Camera Microphones"
+    },
+    {
+      "categoryId": 389,
+      "attributeGroupId": 356,
+      "attributeGroupName": "Handheld Wireless Microphone Sy"
+    },
+    {
+      "categoryId": 389,
+      "attributeGroupId": 357,
+      "attributeGroupName": "Headset Wireless Microphone Sys"
+    },
+    {
+      "categoryId": 389,
+      "attributeGroupId": 358,
+      "attributeGroupName": "Lavalier Wireless Microphone Sy"
+    },
+    {
+      "categoryId": 389,
+      "attributeGroupId": 359,
+      "attributeGroupName": "Wireless Instrument Microphone"
+    },
+    {
+      "categoryId": 389,
+      "attributeGroupId": 361,
+      "attributeGroupName": "UNIVERSAL CARDIOID MICROPHONE"
+    },
+    {
+      "categoryId": 389,
+      "attributeGroupId": 345,
+      "attributeGroupName": "Headset & Earset Microphones"
+    },
+    {
+      "categoryId": 389,
+      "attributeGroupId": 346,
+      "attributeGroupName": "Lavalier Microphones"
+    },
+    {
+      "categoryId": 389,
+      "attributeGroupId": 347,
+      "attributeGroupName": "Shotgun Microphones"
+    },
+    {
+      "categoryId": 389,
+      "attributeGroupId": 348,
+      "attributeGroupName": "Studio Microphones"
+    },
+    {
+      "categoryId": 389,
+      "attributeGroupId": 349,
+      "attributeGroupName": "Instrument Microphones"
+    },
+    {
+      "categoryId": 389,
+      "attributeGroupId": 350,
+      "attributeGroupName": "Handheld Microphones"
+    },
+    {
+      "categoryId": 389,
+      "attributeGroupId": 351,
+      "attributeGroupName": "Gooseneck & Paging Microphones"
+    },
+    {
+      "categoryId": 390,
+      "attributeGroupId": 28,
+      "attributeGroupName": "Collapsible Reflectors"
+    },
+    {
+      "categoryId": 390,
+      "attributeGroupId": 29,
+      "attributeGroupName": "Butterfly & Panel Reflector Fab"
+    },
+    {
+      "categoryId": 390,
+      "attributeGroupId": 30,
+      "attributeGroupName": "Reflector Boards"
+    },
+    {
+      "categoryId": 390,
+      "attributeGroupId": 31,
+      "attributeGroupName": "Butterfly & Panel Reflector Kit"
+    },
+    {
+      "categoryId": 390,
+      "attributeGroupId": 32,
+      "attributeGroupName": "Reflector Accessories"
+    },
+    {
+      "categoryId": 398,
+      "attributeGroupId": 363,
+      "attributeGroupName": "Flash Accessories"
+    }
+  ],
+  "brandList": [
+    {
+      "brandId": 96,
+      "brandName": "7Artisans"
+    },
+    {
+      "brandId": 123,
+      "brandName": "AFI"
+    },
+    {
+      "brandId": 125,
+      "brandName": "Andbon"
+    },
+    {
+      "brandId": 119,
+      "brandName": "Atmos"
+    },
+    {
+      "brandId": 43,
+      "brandName": "Bean"
+    },
+    {
+      "brandId": 54,
+      "brandName": "Benro"
+    },
+    {
+      "brandId": 85,
+      "brandName": "BLACKMAGIC"
+    },
+    {
+      "brandId": 62,
+      "brandName": "Blackrapid"
+    },
+    {
+      "brandId": 108,
+      "brandName": "BLUTEK"
+    },
+    {
+      "brandId": 90,
+      "brandName": "Boya"
+    },
+    {
+      "brandId": 117,
+      "brandName": "BULL"
+    },
+    {
+      "brandId": 124,
+      "brandName": "Camarmour"
+    },
+    {
+      "brandId": 89,
+      "brandName": "CAMOCOAT"
+    },
+    {
+      "brandId": 22,
+      "brandName": "Canon"
+    },
+    {
+      "brandId": 105,
+      "brandName": "CAVER"
+    },
+    {
+      "brandId": 110,
+      "brandName": "Colorama"
+    },
+    {
+      "brandId": 86,
+      "brandName": "COREFLASH"
+    },
+    {
+      "brandId": 121,
+      "brandName": "Datacolor"
+    },
+    {
+      "brandId": 10,
+      "brandName": "Digitek"
+    },
+    {
+      "brandId": 46,
+      "brandName": "Dji"
+    },
+    {
+      "brandId": 78,
+      "brandName": "EASYCOVER"
+    },
+    {
+      "brandId": 27,
+      "brandName": "E-Image"
+    },
+    {
+      "brandId": 13,
+      "brandName": "Elinchrom"
+    },
+    {
+      "brandId": 87,
+      "brandName": "ENERGIZER"
+    },
+    {
+      "brandId": 5,
+      "brandName": "Envie"
+    },
+    {
+      "brandId": 109,
+      "brandName": "FEELWORLD"
+    },
+    {
+      "brandId": 65,
+      "brandName": "Feiyutech"
+    },
+    {
+      "brandId": 18,
+      "brandName": "Fotonica"
+    },
+    {
+      "brandId": 37,
+      "brandName": "Fotopro"
+    },
+    {
+      "brandId": 42,
+      "brandName": "Fujifilm"
+    },
+    {
+      "brandId": 55,
+      "brandName": "Ggs"
+    },
+    {
+      "brandId": 68,
+      "brandName": "Gitzo"
+    },
+    {
+      "brandId": 19,
+      "brandName": "Godox"
+    },
+    {
+      "brandId": 1,
+      "brandName": "Gopole"
+    },
+    {
+      "brandId": 2,
+      "brandName": "Gopro"
+    },
+    {
+      "brandId": 44,
+      "brandName": "Haida"
+    },
+    {
+      "brandId": 97,
+      "brandName": "Hako"
+    },
+    {
+      "brandId": 12,
+      "brandName": "Harison"
+    },
+    {
+      "brandId": 80,
+      "brandName": "HOLDFAST"
+    },
+    {
+      "brandId": 95,
+      "brandName": "Hollyland"
+    },
+    {
+      "brandId": 33,
+      "brandName": "Hoya"
+    },
+    {
+      "brandId": 3,
+      "brandName": "Jealiot"
+    },
+    {
+      "brandId": 14,
+      "brandName": "Jjc"
+    },
+    {
+      "brandId": 59,
+      "brandName": "Joby"
+    },
+    {
+      "brandId": 34,
+      "brandName": "K&F"
+    },
+    {
+      "brandId": 116,
+      "brandName": "K&F CONCEPT"
+    },
+    {
+      "brandId": 57,
+      "brandName": "Kata"
+    },
+    {
+      "brandId": 30,
+      "brandName": "Kenko"
+    },
+    {
+      "brandId": 40,
+      "brandName": "Kingjoy"
+    },
+    {
+      "brandId": 102,
+      "brandName": "Klik"
+    },
+    {
+      "brandId": 15,
+      "brandName": "Kodak"
+    },
+    {
+      "brandId": 35,
+      "brandName": "Lensbaby"
+    },
+    {
+      "brandId": 111,
+      "brandName": "LEOFOTO"
+    },
+    {
+      "brandId": 82,
+      "brandName": "LIFE"
+    },
+    {
+      "brandId": 20,
+      "brandName": "Lightchrom"
+    },
+    {
+      "brandId": 101,
+      "brandName": "Lilliput"
+    },
+    {
+      "brandId": 113,
+      "brandName": "LINKLITE"
+    },
+    {
+      "brandId": 6,
+      "brandName": "Local"
+    },
+    {
+      "brandId": 107,
+      "brandName": "Loupedeck"
+    },
+    {
+      "brandId": 36,
+      "brandName": "Lowepro"
+    },
+    {
+      "brandId": 76,
+      "brandName": "Magmod"
+    },
+    {
+      "brandId": 39,
+      "brandName": "Manfrotto"
+    },
+    {
+      "brandId": 25,
+      "brandName": "Meco"
+    },
+    {
+      "brandId": 1128,
+      "brandName": "MECOREX"
+    },
+    {
+      "brandId": 126,
+      "brandName": "Mefoto"
+    },
+    {
+      "brandId": 53,
+      "brandName": "Meike"
+    },
+    {
+      "brandId": 71,
+      "brandName": "Metabone"
+    },
+    {
+      "brandId": 75,
+      "brandName": "MILIBOO"
+    },
+    {
+      "brandId": 92,
+      "brandName": "Moza"
+    },
+    {
+      "brandId": 99,
+      "brandName": "National Geographic"
+    },
+    {
+      "brandId": 1127,
+      "brandName": "NEUTRIK"
+    },
+    {
+      "brandId": 51,
+      "brandName": "Nikon"
+    },
+    {
+      "brandId": 26,
+      "brandName": "Nisi"
+    },
+    {
+      "brandId": 4,
+      "brandName": "Panasonic"
+    },
+    {
+      "brandId": 32,
+      "brandName": "Peak Design"
+    },
+    {
+      "brandId": 17,
+      "brandName": "Photron"
+    },
+    {
+      "brandId": 28,
+      "brandName": "Phottix"
+    },
+    {
+      "brandId": 16,
+      "brandName": "Pinball"
+    },
+    {
+      "brandId": 81,
+      "brandName": "POWER SMART"
+    },
+    {
+      "brandId": 91,
+      "brandName": "Powermg"
+    },
+    {
+      "brandId": 106,
+      "brandName": "POWERPAK"
+    },
+    {
+      "brandId": 11,
+      "brandName": "Powerpak"
+    },
+    {
+      "brandId": 74,
+      "brandName": "Primary"
+    },
+    {
+      "brandId": 38,
+      "brandName": "Rode"
+    },
+    {
+      "brandId": 84,
+      "brandName": "ROYAL BRODCASTING"
+    },
+    {
+      "brandId": 93,
+      "brandName": "Samsung"
+    },
+    {
+      "brandId": 69,
+      "brandName": "Samyang"
+    },
+    {
+      "brandId": 9,
+      "brandName": "Sandisk"
+    },
+    {
+      "brandId": 47,
+      "brandName": "Saramonic"
+    },
+    {
+      "brandId": 115,
+      "brandName": "SECCED"
+    },
+    {
+      "brandId": 100,
+      "brandName": "Sekonic"
+    },
+    {
+      "brandId": 56,
+      "brandName": "Sennheiser"
+    },
+    {
+      "brandId": 61,
+      "brandName": "Sigma"
+    },
+    {
+      "brandId": 94,
+      "brandName": "Simpex"
+    },
+    {
+      "brandId": 127,
+      "brandName": "SIRUI"
+    },
+    {
+      "brandId": 50,
+      "brandName": "Sjcam"
+    },
+    {
+      "brandId": 98,
+      "brandName": "Smallrig"
+    },
+    {
+      "brandId": 24,
+      "brandName": "Smartpro"
+    },
+    {
+      "brandId": 8,
+      "brandName": "Sonia"
+    },
+    {
+      "brandId": 31,
+      "brandName": "Sony"
+    },
+    {
+      "brandId": 64,
+      "brandName": "Sunco"
+    },
+    {
+      "brandId": 103,
+      "brandName": "Sunwayfoto"
+    },
+    {
+      "brandId": 48,
+      "brandName": "Tamrac"
+    },
+    {
+      "brandId": 58,
+      "brandName": "Tamron"
+    },
+    {
+      "brandId": 79,
+      "brandName": "TETHER TOOLS"
+    },
+    {
+      "brandId": 66,
+      "brandName": "Thinktank"
+    },
+    {
+      "brandId": 70,
+      "brandName": "Tokina"
+    },
+    {
+      "brandId": 63,
+      "brandName": "Tolifo"
+    },
+    {
+      "brandId": 41,
+      "brandName": "Transcend"
+    },
+    {
+      "brandId": 29,
+      "brandName": "Vanguard"
+    },
+    {
+      "brandId": 23,
+      "brandName": "Varta"
+    },
+    {
+      "brandId": 52,
+      "brandName": "Videolink"
+    },
+    {
+      "brandId": 67,
+      "brandName": "Viltrox"
+    },
+    {
+      "brandId": 83,
+      "brandName": "VISICO"
+    },
+    {
+      "brandId": 120,
+      "brandName": "WACOM"
+    },
+    {
+      "brandId": 118,
+      "brandName": "WELBORN"
+    },
+    {
+      "brandId": 21,
+      "brandName": "Welborn"
+    },
+    {
+      "brandId": 77,
+      "brandName": "Wise"
+    },
+    {
+      "brandId": 88,
+      "brandName": "YI"
+    },
+    {
+      "brandId": 49,
+      "brandName": "Yongnuo"
+    },
+    {
+      "brandId": 60,
+      "brandName": "Zeiss"
+    },
+    {
+      "brandId": 45,
+      "brandName": "Zhiyun"
+    },
+    {
+      "brandId": 112,
+      "brandName": "ZOOMPOD"
+    }
+  ]
+}

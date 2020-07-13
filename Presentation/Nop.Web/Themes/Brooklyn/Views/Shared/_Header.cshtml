@@ -1,0 +1,108 @@
+﻿@using Nop.Core
+@using Nop.Services.Configuration
+@using Nop.Services.Security
+
+@model int
+
+@inject IStoreContext storeContext
+@inject ISettingService settingService
+@inject IPermissionService permissionService
+
+@{
+    var storeId = storeContext.CurrentStore.Id;
+    var headerLayout = settingService.GetSettingByKey("brooklynthemesettings.headerlayout", "header-1", storeId, true);
+    var isHeader1 = String.Compare(headerLayout, "header-1", true) == 0;
+
+    var showCartQuantity = settingService.GetSettingByKey("brooklynthemesettings.ShowCartQuantityMarker", false, storeId, true);
+
+    var megaMenuWithPicturesLayout = settingService.GetSettingByKey("brooklynthemesettings.megamenuwithpictureslayout", "pictures-per-row-four", storeId, true);
+
+    var shoppingCartEnabled = permissionService.Authorize(StandardPermissionProvider.EnableShoppingCart);
+    var wishlistEnabled = permissionService.Authorize(StandardPermissionProvider.EnableWishlist);
+}
+
+
+<div class="header @headerLayout">
+    @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HeaderBefore })
+    <div class="header-upper">
+        <div class="header-options-wrapper">
+            @if (!isHeader1)
+            {
+                @await Component.InvokeAsync("Logo") // header 2
+            }
+            @if (!isHeader1)
+            {
+                <div class="search-box store-search-box">
+                    @await Component.InvokeAsync("SearchBox")
+                </div>
+            }
+            <div class="header-options">
+                <div class="header-links-wrapper">
+                    @await Component.InvokeAsync("HeaderLinks")
+                </div>
+                <div class="header-selectors-wrapper">
+                    @await Component.InvokeAsync("TaxTypeSelector")
+                    @await Component.InvokeAsync("CurrencySelector")
+                    @await Component.InvokeAsync("LanguageSelector")
+            @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HeaderSelectors })
+                </div>
+            </div>
+            @if (isHeader1)
+            {
+                <div class="search-box store-search-box">
+                    @await Component.InvokeAsync("SearchBox")
+                </div>
+            }
+        </div>
+    </div>
+    <div class="header-lower">
+        <div class="header-actions-wrapper">
+            @if (isHeader1)
+            {
+                @await Component.InvokeAsync("Logo") //header-1
+            }
+
+            @{
+                var menuHtml = await Component.InvokeAsync("Widget", new { widgetZone = "theme_header_menu" });
+            }
+            @if (String.IsNullOrEmpty(menuHtml.ToHtmlString())) // if no mega menu, no need for additional class
+            {
+                megaMenuWithPicturesLayout = String.Empty;
+            }
+            <div id="headerMenuParent">
+            <div class="header-menu @megaMenuWithPicturesLayout">
+                <div class="close-menu">
+                    <span>@T("SevenSpikes.Themes.Common.CloseMenu")</span>
+                </div>
+
+                @if (!String.IsNullOrEmpty(menuHtml.ToHtmlString()))
+                {
+                    @menuHtml
+                }
+                else
+                {
+                    @await Component.InvokeAsync("TopMenu")
+                }
+            </div>
+            </div>
+            <div class="header-actions">
+                @if (wishlistEnabled)
+                {
+                    <a alt="@T("Wishlist")" href="@Url.RouteUrl("Wishlist")" class="ico-wishlist">
+                        <span class="wishlist-qty"></span>
+                    </a>
+                }
+                @if (shoppingCartEnabled)
+                {
+                    <a alt="@T("Shoppingcart")" href="@Url.RouteUrl("ShoppingCart")" class="ico-cart">
+                        @if (showCartQuantity)
+                        {
+                            <span class="cart-qty">@T("ShoppingCart.HeaderQuantity", Model)</span>
+                        }
+                    </a>
+                    @await Component.InvokeAsync("FlyoutShoppingCart")
+                }
+            </div>
+        </div>
+    </div>
+</div>

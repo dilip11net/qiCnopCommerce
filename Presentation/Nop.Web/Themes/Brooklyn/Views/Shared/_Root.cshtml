@@ -1,0 +1,139 @@
+﻿@using Nop.Core
+@using Nop.Services.Configuration
+@using Nop.Services.Security
+@using Nop.Services.Orders
+@using Nop.Core.Domain.Orders
+
+@inject IStoreContext storeContext
+@inject IWorkContext workContext
+@inject ISettingService settingService
+@inject IPermissionService permissionService
+@inject IShoppingCartService shoppingCartService
+
+@{
+    Layout = "_Root.Head";
+   // Layout = "/Views/Shared/_Root.Head.cshtml";
+}
+@{
+         var storeId = storeContext.CurrentStore.Id;
+    var numberOfItemBoxesClass = settingService.GetSettingByKey("brooklynthemesettings.catalogpagesitemboxesperrow", "items-per-row-four", storeId, true).ToLowerInvariant();
+
+    var homePageCss = String.Empty;
+    var controllerName = Url.ActionContext.RouteData.Values["controller"].ToString();
+    var isHomePage = controllerName.Equals("home", StringComparison.InvariantCultureIgnoreCase);
+    if (isHomePage)
+    {
+        homePageCss = "master-wrapper-home";
+    }
+
+    var isProductPage = controllerName.Equals("product", StringComparison.InvariantCultureIgnoreCase);
+
+    var productPageLayout = String.Empty;
+    if (isProductPage)
+    {
+        productPageLayout = settingService.GetSettingByKey("brooklynthemesettings.productpagelayout", "one-column", storeId, true);
+    }
+
+    var shoppingCartEnabled = permissionService.Authorize(StandardPermissionProvider.EnableShoppingCart);
+    var wishlistEnabled = permissionService.Authorize(StandardPermissionProvider.EnableWishlist);
+
+    var showCartQuantity = settingService.GetSettingByKey("brooklynthemesettings.ShowCartQuantityMarker", false, storeId, true);
+    int shoppingCartItems = 0;
+
+    if (showCartQuantity)
+    {
+        var customer = workContext.CurrentCustomer;
+
+        if (customer.HasShoppingCartItems)
+        {
+            shoppingCartItems = shoppingCartService.GetShoppingCart(workContext.CurrentCustomer, ShoppingCartType.ShoppingCart, storeContext.CurrentStore.Id)
+                              .Sum(item => item.Quantity);
+        }
+    }
+}
+
+@await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.BodyStartHtmlTagAfter })
+@await Html.PartialAsync("_Notifications")
+@await Html.PartialAsync("_JavaScriptDisabledWarning")
+@await Html.PartialAsync("_OldInternetExplorerWarning")
+
+<div class="master-wrapper-page @homePageCss @numberOfItemBoxesClass">
+    @await Component.InvokeAsync("AdminHeaderLinks")
+    @await Html.PartialAsync("_Header", shoppingCartItems)
+    <script asp-location="Footer">
+        var localized_data = {
+            AjaxCartFailure: "@T("AjaxCart.Failure")"
+        };
+        AjaxCart.init(false, '.shopping-cart-link .cart-qty, .header-actions .cart-qty', '.header-links .wishlist-qty', '#flyout-cart', localized_data);
+    </script>
+    <div class="overlayOffCanvas"></div>
+    <div class="responsive-nav-wrapper-parent">
+        <div class="responsive-nav-wrapper">
+            <div class="menu-title">
+                <span>@T("SevenSpikes.Themes.Common.MenuTitle")</span>
+            </div>
+            <div class="search-wrap">
+                <span>@T("Search")</span>
+            </div>
+            @if (wishlistEnabled)
+            {
+                <div class="wishlist-opener">
+                    <a alt="@T("Wishlist")" href="@Url.RouteUrl("Wishlist")" title="@T("Wishlist")">@T("Wishlist")</a>
+                </div>
+            }
+            @if (shoppingCartEnabled)
+            {
+                <div class="shopping-cart-link">
+                    <a alt="@T("Shoppingcart")" href="@Url.RouteUrl("ShoppingCart")">
+                        @if (showCartQuantity)
+                        {
+                            <small class="cart-qty">@T("ShoppingCart.HeaderQuantity", shoppingCartItems)</small>
+                        }
+                    </a>
+                </div>
+            }
+            <div class="filters-button">
+                <span>@T("SevenSpikes.Themes.Common.Filters")</span>
+            </div>
+            <div class="personal-button" id="header-links-opener">
+                <span>@T("SevenSpikes.Themes.Common.Personal")</span>
+            </div>
+        </div>
+    </div>
+    @if (isHomePage)
+    {
+        @await Component.InvokeAsync("Widget", new { widgetZone = "home_page_main_slider" })
+
+        var secondBannerAdditionalCssClass = String.Empty;
+        var hideSecondBannerOnMobile = settingService.GetSettingByKey("brooklynthemesettings.hidesecondmainslideronmobile", false, storeId, true);
+        if (hideSecondBannerOnMobile)
+        {
+            secondBannerAdditionalCssClass = "hide-banner";
+        }
+
+        var homePageLeftBanner = await Component.InvokeAsync("Widget", new { widgetZone = "home_page_left_banner_top" });
+        var homePageRightBanner = await Component.InvokeAsync("Widget", new { widgetZone = "home_page_right_banner_top" });
+
+        if (!String.IsNullOrEmpty(homePageLeftBanner.ToHtmlString()) && !String.IsNullOrEmpty(homePageRightBanner.ToHtmlString()))
+        {
+            <div class="banner-wrapper">
+                <div class="main-banner main-banner-1">@homePageLeftBanner</div>
+                <div class="main-banner main-banner-2 @secondBannerAdditionalCssClass">@homePageRightBanner</div>
+            </div>
+        }
+    }
+    <div class="master-wrapper-content @productPageLayout" style="margin-top:0 !important">
+        @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.ContentBefore })
+        @if (IsSectionDefined("Breadcrumb"))
+        {
+            @RenderSection("Breadcrumb")
+        }
+        <div class="master-column-wrapper">
+            @RenderBody()
+        </div>
+        @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.ContentAfter })
+    </div>
+    @await Component.InvokeAsync("Footer")
+</div>
+@await Component.InvokeAsync("EuCookieLaw")
+@await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.BodyEndHtmlTagBefore })

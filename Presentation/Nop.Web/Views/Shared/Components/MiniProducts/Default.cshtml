@@ -1,0 +1,477 @@
+﻿
+
+<style>
+    .slider-for2 {
+        width: 500px;
+        height: 250px;
+        margin: 30px auto 1px;
+        overflow: hidden;
+    }
+
+    .slider-for {
+        width: 500px;
+        height: 250px;
+        margin: 30px auto 1px;
+        overflow: hidden;
+    }
+
+    img {
+        width: 100%;
+        min-height: 100%;
+    }
+
+    .slider-nav2 {
+        width: 100%;
+        margin: auto;
+    }
+
+
+    .slider-nav {
+        width: 1200px;
+        height: 585px;
+        margin: auto;
+    }
+
+        .slider-nav .slick-track {
+            height: 585px;
+        }
+
+    .slick-arrow {
+        position: absolute;
+        top: 50%;
+        z-index: 50;
+        margin-top: -12px;
+    }
+
+    .slick-prev {
+        left: -110px;
+    }
+
+    .slick-next {
+        right: -60px;
+    }
+
+    .slick-slide {
+    }
+
+    .slider-nav .slick-next {
+        position: absolute;
+        top: -35px;
+        width: 200px;
+        height: 500px;
+        border: none;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        z-index: 2;
+        font-size: 0;
+        -webkit-transition: all .2s ease;
+        -moz-transition: all .2s ease;
+        transition: all .2s ease;
+        right: -100px !important;
+        background: url('https://brooklyn1.nop-templates.com/Plugins/SevenSpikes.Nop.Plugins.JCarousel/Themes/Brooklyn/Content/images/next-product-mobile.png') no-repeat center
+        
+    }
+    .slider-nav .slick-prev {
+        position: absolute;
+        top: -35px;
+        width: 200px;
+        height: 500px;
+        border: none;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        z-index: 2;
+        font-size: 0;
+        -webkit-transition: all .2s ease;
+        -moz-transition: all .2s ease;
+        transition: all .2s ease;
+        left: -150px !important;
+        background: url('https://brooklyn1.nop-templates.com/Plugins/SevenSpikes.Nop.Plugins.JCarousel/Themes/Brooklyn/Content/images/prev-product-mobile.png') no-repeat center
+    }
+   
+</style>
+
+@*<link href="https://brooklyn1.nop-templates.com/bundles/h3dceggliaa_yc1_lujpdwm-zjxgb4fehpwmwd8jhte.min.css" rel="stylesheet">*@
+@*<style id="theme-roller-styles"></style>
+    <style id="theme-roller-custom-color-styles">
+        .presets-list.colors li.custom-color {
+            background-color: #;
+        }
+    </style>*@
+
+<div class="sale-of-the-day-offer">
+
+    <div class="grid owl-carousel owl-theme owl-loaded initialized">
+
+
+
+
+
+        <div class="owl-stage">
+            <div class="slider-for2" style="display:none">
+                @foreach (var item in Model)
+                {
+
+                    <div class="owl-item cloned" style="width:1100px; margin-right: 0px;">
+                        <div class="product-element sale-of-the-day-product-1-36" data-productid="36">
+                            <div class="sale-item">
+                                <div class="item-gallery">
+                                    <div class="item-picture"><a href="#" title="@item.Api_Title"> <img src="@item.DefaultPictureModel.ImageUrl" alt="@item.Api_Title" title="@item.Api_Title" loadedimage="true"> </a></div>
+                                </div>
+                                <div class="overview">
+                                    <div class="product-name">
+                                        <h4><a href="#">@item.Api_Title</a></h4>
+                                    </div>
+
+
+
+                                    <div class="short-description">@Html.Raw(item.FullDescription)</div>
+                                    <div class="prices"><span class="price actual-price">@item.ProductPrice.Price</span></div>
+                                    <a href="@item.SeName" class="go-to-product-page">Go To Product Page</a>
+                                </div>
+                                <div class="picture-thumbs">
+                                    <a class="thumb-item" href="#" title="@item.Api_Title">
+                                        <img src="@item.DefaultPictureModel.ImageUrl" alt="Picture of Cosmopolitan Square Sunglasses" title="@item.Api_Title" loadedimage="true">
+                                    </a> <a class="thumb-item" href="#" title="@item.Api_Title">
+                                        <img src="@item.DefaultPictureModel.ImageUrl" alt="Picture of Cosmopolitan Square Sunglasses" title="@item.Api_Title" loadedimage="true">
+                                    </a> <a class="thumb-item" href="#" title="@item.Api_Title">
+                                        <img src="@item.DefaultPictureModel.ImageUrl" alt="Picture of Cosmopolitan Square Sunglasses" title="@item.Api_Title" loadedimage="true">
+                                    </a> <a class="thumb-item" href="#" title="@item.Api_Title">
+                                        <img src="@item.DefaultPictureModel.ImageUrl" data-lazyloadsrc="@item.DefaultPictureModel.ImageUrl" alt="Picture of Cosmopolitan Square Sunglasses" title="@item.Api_Title" loadedimage="true">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                }
+            </div>
+            <div class="slider-nav2">
+
+                @foreach (var item in Model)
+                {
+
+                    <div class="owl-item cloned">
+                        <div class="product-element sale-of-the-day-product-1-36" data-productid="36">
+                            <div class="sale-item">
+                                <div class="item-gallery">
+                                    <div class="item-picture"><a href="#" title="@item.Api_Title"> <img src="@item.DefaultPictureModel.ImageUrl" alt="@item.Api_Title" title="@item.Api_Title" loadedimage="true"> </a></div>
+                                </div>
+                                <div class="overview">
+                                    <div class="product-name">
+                                        <h4><a href="#">@item.Api_Title</a></h4>
+                                    </div>
+
+
+
+                                    <div class="short-description">@Html.Raw(item.FullDescription)</div>
+                                    <div class="prices"><span class="price actual-price">@item.ProductPrice.Price</span></div>
+                                    <a href="@item.SeName" class="go-to-product-page">Go To Product Page</a>
+                                </div>
+                                <div class="picture-thumbs">
+                                    <a class="thumb-item" href="#" title="@item.Api_Title">
+                                        <img src="@item.DefaultPictureModel.ImageUrl" alt="Picture of Cosmopolitan Square Sunglasses" title="@item.Api_Title" loadedimage="true">
+                                    </a> <a class="thumb-item" href="#" title="@item.Api_Title">
+                                        <img src="@item.DefaultPictureModel.ImageUrl" alt="Picture of Cosmopolitan Square Sunglasses" title="@item.Api_Title" loadedimage="true">
+                                    </a> <a class="thumb-item" href="#" title="@item.Api_Title">
+                                        <img src="@item.DefaultPictureModel.ImageUrl" alt="Picture of Cosmopolitan Square Sunglasses" title="@item.Api_Title" loadedimage="true">
+                                    </a> <a class="thumb-item" href="#" title="@item.Api_Title">
+                                        <img src="@item.DefaultPictureModel.ImageUrl" data-lazyloadsrc="@item.DefaultPictureModel.ImageUrl" alt="Picture of Cosmopolitan Square Sunglasses" title="@item.Api_Title" loadedimage="true">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                }
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+@model IList<ProductOverviewModel>
+@if (Model.Count > 0)
+{
+    <div class="product-grid home-page-product-grid">
+        <div class="title">
+            <strong>@T("homepage.miniproducts")</strong>
+        </div>
+        @*<div class="item-grid">
+                @foreach (var item in Model)
+                {
+                    <div class="item-box">
+                        @await Html.PartialAsync("_MiniProductBox", item)
+                    </div>
+                }
+            </div>*@
+    </div>
+}
+
+
+@*<link href="https://brooklyn1.nop-templates.com/bundles/h3dceggliaa_yc1_lujpdwm-zjxgb4fehpwmwd8jhte.min.css" rel="stylesheet">*@
+
+
+<div class="master-wrapper-page master-wrapper-home" style="display:none">
+    <div class="master-wrapper-content">
+        <div class="master-column-wrapper">
+            <div class="center-1">
+                <div class="page home-page">
+                    <div class="page-body">
+                        <div id="jcarousel-3-491" class="jCarouselMainWrapper transparent">
+                            <div class="nop-jcarousel product-grid home-page-product-grid">
+                                @*<div class="title carousel-title has-navigation" style="display: block;"><strong>Carousel With Products</strong></div>*@
+
+
+
+
+                                <div class="slick-carousel item-grid slick-initialized slick-slider"
+                                     data-numberofvisibleitems="5">
+                                    <button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="">Previous</button><div aria-live="polite" class="slick-list">
+                                        <div class="slick-track" role="listbox" style="opacity: 1; width: 3340px; transform: translate3d(10px, 0px, 0px);">
+
+                                            @foreach (var item in Model)
+                                            {
+
+                                                <div class="carousel-item slick-slide slick-cloned"
+                                                     style="width: 240px;" data-slick-index="-5" aria-hidden="true" tabindex="5">
+                                                    <div class="item-box">
+                                                        @*<div class="product-item with-text sevenspikes-ajaxcart" data-productid="50">
+                                                                                                                            <div class="ribbon-wrapper">
+                                                                                                                                <div class="picture"><div class="quick-view-button"><a title="Quick View" tabindex="-1">Quick View</a></div><a href="https://brooklyn1.nop-templates.com/designer-hat" title="Show details for Designer Hat" tabindex="-1"> <img src="https://brooklyn1.nop-templates.com/images/thumbs/0000220_designer-hat_360.jpeg" alt="Picture of Designer Hat" title="Show details for Designer Hat" style="opacity: 1;"> </a> <input type="button" value="Add to wishlist" title="Add to wishlist" class="button-2 add-to-wishlist-button" onclick="return AjaxCart.addproducttocart_catalog(&quot;/addproducttocart/catalog/50/2/1&quot;),!1" tabindex="-1"></div><a href="https://brooklyn1.nop-templates.com/designer-hat" class="ribbon-position top-right" data-productribbonid="1" data-productid="50" tabindex="-1">
+                                                                                                                                    <div class="product-ribbon product-ribbon" style="right: 20px;
+                                                            padding: 20px 10px;
+                                                            background: #fff;
+                                                            box-shadow: 0 8px 15px 0px rgba(0, 0, 0, 0.12);">
+                                                                                                                                        <label class="ribbon-text" style="font-size: 14px;
+                                                            color: #cc8a97;
+                                                            font-weight: bold;">-33%</label>
+                                                                                                                                    </div>
+                                                                                                                                </a>
+                                                                                                                            </div><div class="details">
+                                                                                                                                <h2 class="product-title"><a href="https://brooklyn1.nop-templates.com/designer-hat" tabindex="-1">Designer Hat</a></h2><div class="product-rating-box" title="1 review(s)"><div class="rating"><div style="width:100%"></div></div></div><div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ins ididunt ut labore et dolore magna aliqua. Ut consequat.Duis aute irure dolor in voluptate.</div><div class="add-info">
+                                                                                                                                    <div class="prices"><span class="price old-price">$75.00</span> <span class="price actual-price">$50.00</span></div><div class="buttons">
+                                                                                                                                        <div class="ajax-cart-button-wrapper qty-enabled" data-productid="50" data-isproductpage="false">
+                                                                                                                                            <input type="text" data-quantityproductid="50" class="productQuantityTextBox" value="1" tabindex="-1">
+                                                                                                                                            <input type="button" value="Add to cart" class="button-2 product-box-add-to-cart-button nopAjaxCartProductListAddToCartButton" data-productid="50" tabindex="-1">
+                                                                                                                                        </div> <input type="button" value="Add to compare list" title="Add to compare list" class="button-2 add-to-compare-list-button" onclick="return AjaxCart.addproducttocomparelist(&quot;/compareproducts/add/50&quot;),!1" tabindex="-1"> <input type="button" value="Add to wishlist" title="Add to wishlist" class="button-2 add-to-wishlist-button" onclick="return AjaxCart.addproducttocart_catalog(&quot;/addproducttocart/catalog/50/2/1&quot;),!1" tabindex="-1">
+                                                                                                                                    </div>
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                        </div>*@
+                                                        @await Html.PartialAsync("_MiniProductBox", item)
+                                                    </div>
+                                                </div>
+
+                                            }
+
+
+
+
+
+                                        </div>
+
+
+
+
+                                    </div><button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<link href="https://brooklyn1.nop-templates.com/bundles/ubtu_cnrmbk4yigtpyou027kvbiejzrwqchs9pvwr8c.min.css" rel="stylesheet">*@
+
+
+
+<div class="slider-for" style="display:none">
+
+    @foreach (var item in Model)
+    {
+
+
+
+        @*<div class="carousel-item slick-slide slick-cloned"
+            style="width: 240px;" data-slick-index="-5" aria-hidden="true" tabindex="5">*@
+        <div class="item-box">
+            @*<div class="product-item with-text sevenspikes-ajaxcart" data-productid="50">
+                                                                                <div class="ribbon-wrapper">
+                                                                                    <div class="picture"><div class="quick-view-button"><a title="Quick View" tabindex="-1">Quick View</a></div><a href="https://brooklyn1.nop-templates.com/designer-hat" title="Show details for Designer Hat" tabindex="-1"> <img src="https://brooklyn1.nop-templates.com/images/thumbs/0000220_designer-hat_360.jpeg" alt="Picture of Designer Hat" title="Show details for Designer Hat" style="opacity: 1;"> </a> <input type="button" value="Add to wishlist" title="Add to wishlist" class="button-2 add-to-wishlist-button" onclick="return AjaxCart.addproducttocart_catalog(&quot;/addproducttocart/catalog/50/2/1&quot;),!1" tabindex="-1"></div><a href="https://brooklyn1.nop-templates.com/designer-hat" class="ribbon-position top-right" data-productribbonid="1" data-productid="50" tabindex="-1">
+                                                                                        <div class="product-ribbon product-ribbon" style="right: 20px;
+                padding: 20px 10px;
+                background: #fff;
+                box-shadow: 0 8px 15px 0px rgba(0, 0, 0, 0.12);">
+                                                                                            <label class="ribbon-text" style="font-size: 14px;
+                color: #cc8a97;
+                font-weight: bold;">-33%</label>
+                                                                                        </div>
+                                                                                    </a>
+                                                                                </div><div class="details">
+                                                                                    <h2 class="product-title"><a href="https://brooklyn1.nop-templates.com/designer-hat" tabindex="-1">Designer Hat</a></h2><div class="product-rating-box" title="1 review(s)"><div class="rating"><div style="width:100%"></div></div></div><div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ins ididunt ut labore et dolore magna aliqua. Ut consequat.Duis aute irure dolor in voluptate.</div><div class="add-info">
+                                                                                        <div class="prices"><span class="price old-price">$75.00</span> <span class="price actual-price">$50.00</span></div><div class="buttons">
+                                                                                            <div class="ajax-cart-button-wrapper qty-enabled" data-productid="50" data-isproductpage="false">
+                                                                                                <input type="text" data-quantityproductid="50" class="productQuantityTextBox" value="1" tabindex="-1">
+                                                                                                <input type="button" value="Add to cart" class="button-2 product-box-add-to-cart-button nopAjaxCartProductListAddToCartButton" data-productid="50" tabindex="-1">
+                                                                                            </div> <input type="button" value="Add to compare list" title="Add to compare list" class="button-2 add-to-compare-list-button" onclick="return AjaxCart.addproducttocomparelist(&quot;/compareproducts/add/50&quot;),!1" tabindex="-1"> <input type="button" value="Add to wishlist" title="Add to wishlist" class="button-2 add-to-wishlist-button" onclick="return AjaxCart.addproducttocart_catalog(&quot;/addproducttocart/catalog/50/2/1&quot;),!1" tabindex="-1">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>*@
+            @await Html.PartialAsync("_MiniProductBox", item)
+            @*</div>*@
+        </div>
+    }
+
+</div>
+
+<div class="slider-nav">
+
+
+
+
+    @foreach (var item in Model)
+    {
+
+        <div class="item">
+            <div class="carousel-item slick-slide slick-cloned"
+                 style="width: 200px;">
+                <div class="item-box">
+
+                    @await Html.PartialAsync("_MiniProductBox", item)
+                </div>
+            </div>
+        </div>
+
+        @*<div class="carousel-item slick-slide slick-cloned"
+                 style="width: 240px;" data-slick-index="-5" aria-hidden="true" tabindex="5">
+                <div class="item-box">
+
+                    @await Html.PartialAsync("_MiniProductBox", item)
+                </div>
+            </div>*@
+    }
+
+    @foreach (var item in Model)
+    {
+
+        <div class="item">
+            <div class="carousel-item slick-slide slick-cloned"
+                 style="width: 200px;">
+                <div class="item-box">
+
+                    @await Html.PartialAsync("_MiniProductBox", item)
+                </div>
+            </div>
+        </div>
+
+        @*<div class="carousel-item slick-slide slick-cloned"
+                 style="width: 240px;" data-slick-index="-5" aria-hidden="true" tabindex="5">
+                <div class="item-box">
+
+                    @await Html.PartialAsync("_MiniProductBox", item)
+                </div>
+            </div>*@
+    }
+
+
+
+
+</div>
+@*<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="">Next</button>
+
+    <button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="">Previous</button>*@
+<script>
+
+
+
+    $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.slider-nav',
+        autoplay: true
+    });
+    $('.slider-nav').slick({
+        slidesToShow: 5,
+        slidesToScroll: 2,
+        asNavFor: '.slider-for',
+        dots: false,
+        centerMode: false,
+        focusOnSelect: true
+
+    });
+
+
+
+
+    $('.slider-for2').slick({
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        arrows: false,
+        fade: true,
+        asNavFor: '.slider-nav2',
+        autoplay: true
+    });
+    $('.slider-nav2').slick({
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        asNavFor: '.slider-for2',
+        dots: false,
+        centerMode: false,
+        focusOnSelect: true
+        , arrows: false, fade: false
+
+    });
+
+    $(document).ready(function () {
+
+
+        // $("button").addClass("slick-next slick-arrow");
+
+    });
+
+</script>

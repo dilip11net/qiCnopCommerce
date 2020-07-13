@@ -1,0 +1,113 @@
+﻿@model TopicModel
+@*
+
+    @if (Model.IsPasswordProtected)
+    {
+        <script asp-location="Footer">
+            $(document).ready(function () {
+                $('#button-password-@Model.Id').on('click', function() {
+                    var postData = {
+                        id: $("#topic-@Model.Id").val(),
+                        password: $('#password-@Model.Id').val()
+                    };
+                    addAntiForgeryToken(postData);
+
+                    $.ajax({
+                        cache: false,
+                        type: "POST",
+                        url: "@Url.RouteUrl("TopicAuthenticate")",
+                        data: postData,
+                        dataType: "json",
+                        success: function (data, textStatus, jqXHR) {
+                            if (data.Authenticated) {
+                                $('#ph-topic-@Model.Id #ph-title-@Model.Id h2').html(data.Title);
+                                if ($('#ph-topic-@Model.Id #ph-title-@Model.Id h2').text().length == 0) {
+                                    $('#ph-title-@Model.Id').hide();
+                                }
+                                $('#ph-topic-@Model.Id .topic-block-body').html(data.Body);
+                                $('#ph-password-@Model.Id').hide();
+                                $('#ph-topic-@Model.Id').show();
+                                //we need to re-run the validation plugin after the content is loaded after successful authentication
+                                $.validator.unobtrusive.parse('#ph-topic-@Model.Id');
+                            } else {
+                                $('#password-error-@Model.Id').text(data.Error).fadeIn("slow");
+                                $('#ph-password-@Model.Id #password-@Model.Id').select().focus();
+                            }
+                        }
+                    });
+                    return false;
+                });
+            });
+
+            $(document).ready(function() {
+                $('#ph-topic-@Model.Id').hide();
+                $('#ph-password-@Model.Id #password-@Model.Id').select().focus();
+            });
+        </script>
+        <div class="topic-password" id="ph-password-@Model.Id">
+            <form asp-route="TopicAuthenticate" method="post" autocomplete="off">
+                <input asp-for="Id" id="topic-@Model.Id" type="hidden" />
+                <div class="enter-password-title">
+                    @T("Topic.EnterPassword")
+                </div>
+                <div class="enter-password-form">
+                    <input name="password" type="password" id="password-@(Model.Id)" />
+                    <input type="submit" id="button-password-@Model.Id" value="@T("Topic.Button")" class="button-1 topic-password-button" />
+                </div>
+                <div class="password-error" id="password-error-@Model.Id" style="display: none;"></div>
+            </form>
+        </div>
+        <div class="topic-block" id="ph-topic-@Model.Id">
+            <div class="topic-block-title" id="ph-title-@Model.Id">
+                <h2>@Model.Title</h2>
+            </div>
+            <div class="topic-block-body">
+                @Html.Raw(Model.Body)
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="topic-block">
+            @if (!string.IsNullOrEmpty(Model.Title))
+            {
+                <div class="topic-block-title">
+                    <h2>@Model.Title</h2>
+                </div>
+            }
+            <div class="topic-block-body">
+                @Html.Raw(Model.Body)
+            </div>
+
+        </div>
+    }
+*@
+
+<div class="master-wrapper-page master-wrapper-home">
+
+    <div class="banner-wrapper" style="height: 429.719px;">
+        <div class="main-banner main-banner-1">
+            <div class="slider-wrapper anywhere-sliders-nivo-slider theme- no-captions" data-imagescount="2" data-sliderhtmlelementid="WidgetSlider-home_page_left_banner_top-1" data-imagesstring="<img src=&quot;data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==&quot; data-thumb=&quot;data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==&quot;data-desktopImage=&quot;https://brooklyn1.nop-templates.com/images/thumbs/0000399.jpeg&quot;data-desktopThumb=&quot;https://brooklyn1.nop-templates.com/images/thumbs/0000399.jpeg&quot;data-mobileImage=&quot;https://brooklyn1.nop-templates.com/images/thumbs/0000419_brooklyn1(1).jpeg&quot;data-mobileThumb=&quot;https://brooklyn1.nop-templates.com/images/thumbs/0000419_brooklyn1(1).jpeg&quot;alt=&quot;slider image&quot; title=&quot;&quot; /><img src=&quot;data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==&quot; data-thumb=&quot;data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==&quot;data-desktopImage=&quot;https://brooklyn1.nop-templates.com/images/thumbs/0000410.jpeg&quot;data-desktopThumb=&quot;https://brooklyn1.nop-templates.com/images/thumbs/0000410.jpeg&quot;data-mobileImage=&quot;https://brooklyn1.nop-templates.com/images/thumbs/0000420_brooklyn1(2).jpeg&quot;data-mobileThumb=&quot;https://brooklyn1.nop-templates.com/images/thumbs/0000420_brooklyn1(2).jpeg&quot;alt=&quot;slider image&quot; title=&quot;&quot; />" data-effect="fade" data-slices="15" data-boxcols="8" data-boxrows="4" data-animspeed="500" data-pausetime="3000" data-directionnav="true" data-controlnav="false" data-controlnavthumbs="false" data-pauseonhover="true" data-prevtext="" data-nexttext="" data-mobilebreakpoint="767">
+                <div id="WidgetSlider-home_page_left_banner_top-1" class="nivoSlider">
+                    <img src="https://brooklyn1.nop-templates.com/images/thumbs/0000399.jpeg" data-thumb="https://brooklyn1.nop-templates.com/images/thumbs/0000399.jpeg" data-desktopimage="https://brooklyn1.nop-templates.com/images/thumbs/0000399.jpeg" data-desktopthumb="https://brooklyn1.nop-templates.com/images/thumbs/0000399.jpeg" data-mobileimage="https://brooklyn1.nop-templates.com/images/thumbs/0000419_brooklyn1(1).jpeg" data-mobilethumb="https://brooklyn1.nop-templates.com/images/thumbs/0000419_brooklyn1(1).jpeg" alt="slider image" title="" data-imagelazyloaded="true" style="width: 795px; visibility: hidden;"><img src="https://brooklyn1.nop-templates.com/images/thumbs/0000410.jpeg" data-thumb="https://brooklyn1.nop-templates.com/images/thumbs/0000410.jpeg" data-desktopimage="https://brooklyn1.nop-templates.com/images/thumbs/0000410.jpeg" data-desktopthumb="https://brooklyn1.nop-templates.com/images/thumbs/0000410.jpeg" data-mobileimage="https://brooklyn1.nop-templates.com/images/thumbs/0000420_brooklyn1(2).jpeg" data-mobilethumb="https://brooklyn1.nop-templates.com/images/thumbs/0000420_brooklyn1(2).jpeg" alt="slider image" title="" data-imagelazyloaded="true" style="width: 795px; visibility: hidden;"><img class="nivo-main-image" src="https://brooklyn1.nop-templates.com/images/thumbs/0000399.jpeg" style="height: 429.719px; width: 795px; display: inline-block;">
+                    <div class="nivo-caption" style="display: none;"></div>
+                    <div class="nivo-directionNav"><a class="nivo-prevNav"></a><a class="nivo-nextNav"></a></div>
+
+
+                </div>
+            </div>
+        </div>
+        <div style="" class="main-banner main-banner-2 hide-banner">
+            <div class="slider-wrapper anywhere-sliders-nivo-slider theme- no-captions" data-imagescount="1" data-sliderhtmlelementid="WidgetSlider-home_page_right_banner_top-2" data-imagesstring="<a href=&quot;http://themes.brooklyn1.nop-templates.com/gadgets&quot; title=&quot;&quot;><img src=&quot;data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==&quot; data-thumb=&quot;data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==&quot;data-desktopImage=&quot;https://brooklyn1.nop-templates.com/images/thumbs/0000401.jpeg&quot;data-desktopThumb=&quot;https://brooklyn1.nop-templates.com/images/thumbs/0000401.jpeg&quot;data-mobileImage=&quot;&quot;data-mobileThumb=&quot;&quot;alt=&quot;slider image&quot; /></a>" data-effect="fade" data-slices="15" data-boxcols="8" data-boxrows="4" data-animspeed="500" data-pausetime="3000" data-directionnav="true" data-controlnav="false" data-controlnavthumbs="false" data-pauseonhover="true" data-prevtext="" data-nexttext="" data-mobilebreakpoint="767" style="height: 429.719px;">
+                <a href="#">
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="https://brooklyn1.nop-templates.com/images/thumbs/0000401.jpeg">
+                        <source media="(max-width: 767px)" srcset="">
+                        <img class="nivo-main-image" src="./corosol_files/0000401.jpeg" data-desktopimage="https://brooklyn1.nop-templates.com/images/thumbs/0000401.jpeg" data-desktopthumb="https://brooklyn1.nop-templates.com/images/thumbs/0000401.jpeg" data-mobileimage="" data-mobilethumb="" alt="banner">
+                    </picture>
+                </a>
+                <div class="nivo-caption" style="display:block"></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+﻿@model LogoModel
+
+@using Nop.Core
+@using Nop.Services.Localization
+
+@inject IThemeContext themeContext
+@inject IStoreContext storeContext
+@inject ILocalizationService localizationService
+
+@{
+    //logo path
+    var logoPath = $"~/Themes/{themeContext.WorkingThemeName}/Content/img/logo.png";
+
+    var themeLogo = await Component.InvokeAsync("Widget", new { widgetZone = "brooklyn_theme_logo" });
+}
+<div class="header-logo">
+    <a href="@Url.RouteUrl("HomePage")" class="logo">
+        @if (!String.IsNullOrEmpty(themeLogo.ToHtmlString()))
+        {
+            @themeLogo
+        }
+        else
+        {
+            var storeName = localizationService.GetLocalized(storeContext.CurrentStore, x => x.Name);
+            <img title="" alt="@Model.StoreName" src="@Url.Content(Model.LogoPath)">
+        }
+    </a>
+</div>

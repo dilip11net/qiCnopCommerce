@@ -1,0 +1,5 @@
+﻿{
+  "DataConnectionString": "Data Source=ffd.cuvzrhfpgw1r.ap-south-1.rds.amazonaws.com,1433;Initial Catalog=futureforward;uid=Admin;password=Future123;Integrated Security=False;Persist Security Info=False",
+  "DataProvider": "sqlserver",
+  "RawDataSettings": {}
+}
